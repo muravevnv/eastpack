@@ -1,0 +1,81 @@
+*,
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primary);
+    font-size: 16px;
+    line-height: 1.32;
+    font-weight: 400;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+.container {
+    --container-width: 1232px;
+    --container-padding: 16px;
+    --side-gap: calc((100vw - var(--container-width)) / 2 + var(--container-padding));
+
+    max-width: var(--container-width);
+    padding: 0 var(--container-padding);
+    margin: 0 auto;
+    width: 100%;
+
+    &--wide {
+        max-width: 100%;
+    }
+
+    &--expand-right {
+        max-width: none;
+        margin-left: auto;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        width: calc(100vw - calc(var(--container-padding) / 2) - var(--side-gap));
+
+        @media screen and (max-width: 1232px) {
+            max-width: 100%;
+            width: 100%;
+            padding: 0 var(--container-padding);
+        }
+    }
+
+    &--expand-left {
+        max-width: none;
+        margin-right: auto;
+        margin-left: 0;
+        padding-right: 0;
+        padding-left: 0;
+        width: calc(100vw - calc(var(--container-padding) / 2) var(--side-gap));
+
+        @media screen and (max-width: 1232px) {
+            max-width: 100%;
+            width: 100%;
+            padding: 0 var(--container-padding);
+        }
+    }
+}
+
+.hover-default {
+    transition: color 0.25s ease-in-out;
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: var(--color-primary-100);
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.our-clients {
+    padding: 80px 0;
+    overflow: hidden;
+
+    @media screen and (max-width: 991.98px) {
+        padding: 40px 0;
+    }
+
+    &__title {
+        max-width: 900px;
+        margin: 0 auto 40px;
+        text-align: center;
+    }
+
+    &__sliders {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+
+        @media screen and (max-width: 991.98px) {
+            gap: 16px;
+        }
+    }
+
+    &__slider {
+        width: 100%;
+        max-width: 100%;
+
+        .swiper-slide {
+            width: auto;
+        }
+
+        .swiper-wrapper {
+            transition-timing-function: linear !important;
+        }
+    }
+
+    &__desc {
+        max-width: 720px;
+        font-size: 24px;
+        line-height: 1.2;
+        text-align: center;
+        margin: 40px auto 0;
+
+        @media screen and (max-width: 991.98px) {
+            font-size: 16px;
+            margin-top: 24px;
+        }
+    }
+}

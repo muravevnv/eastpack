@@ -1,0 +1,41 @@
+.subscribe {
+    width: 100%;
+
+    &__title {
+        margin-bottom: 16px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        &-inputs {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+
+            @media screen and (max-width: 1023.98px) {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+
+        &-btn {
+            width: 100%;
+        }
+
+        &-bottom {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+
+            @media screen and (max-width: 1023.98px) {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+    }
+}

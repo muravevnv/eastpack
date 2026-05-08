@@ -1,0 +1,91 @@
+.benefits {
+    border-bottom: 1px solid var(--color-black);
+
+    &__inner {
+        display: grid;
+        grid-template-columns: auto calc(55vw - 16px);
+
+        @media screen and (max-width: 1023.98px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__img {
+        position: relative;
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        border-right: 1px solid var(--color-black);
+
+        @media screen and (max-width: 1023.98px) {
+            height: 200px;
+            border: none;
+        }
+
+        img {
+            position: absolute;
+            inset: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 240px);
+
+
+        @media screen and (max-width: 1439.98px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media screen and (max-width: 767.98px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 24px 16px 12px;
+        min-height: 200px;
+
+        @media screen and (max-width: 767.98px) {
+            min-height: 100px;
+        }
+
+        &:not(:last-of-type) {
+            border-right: 1px solid var(--color-black);
+
+            @media screen and (max-width: 767.98px) {
+                border-right: 0;
+                border-bottom: 1px solid var(--color-black);
+            }
+        }
+
+        &-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 16px;
+            line-height: 1.2;
+            color: var(--color-secondary);
+
+            &::after {
+                content: '';
+                display: block;
+                width: 7px;
+                height: 12px;
+                mask: url('../../images/icons/chevron-right.svg') center center / 7px no-repeat;
+                -webkit-mask: url('../../images/icons/chevron-right.svg') center center / 7px no-repeat;
+                background-color: currentColor;
+            }
+        }
+    }
+}

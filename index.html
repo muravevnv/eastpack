@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/libs/swiper-bundle.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Eastpack</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__main">
+                    <a href="#" class="header__logo">
+                        <img src="./images/logo-icon.png" alt="">
+                    </a>
+                    <nav class="header__nav">
+                        <ul class="header__nav-list">
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link hover-default">главная</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link hover-default">оборудование</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link hover-default">Запчасти и Сервис</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link hover-default">о компании</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link hover-default">Проекты</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link hover-default">контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="header__contacts">
+                    <a href="tel:+74993906258" class="header__contacts-link">+7 (499) 390-62-58</a>
+                    <a href="mailto:sales@eapack.ru" class="header__contacts-link">sales@eapack.ru</a>
+                </div>
+                <div class="header__search">
+                    <button type="button" class="header__search-btn reset-btn">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6.83333 13.1667C10.3311 13.1667 13.1667 10.3311 13.1667 6.83333C13.1667 3.33553 10.3311 0.5 6.83333 0.5C3.33553 0.5 0.5 3.33553 0.5 6.83333C0.5 10.3311 3.33553 13.1667 6.83333 13.1667Z"
+                                stroke="#66A4B1" stroke-miterlimit="10" />
+                            <path d="M11.0547 11.0547L19.4991 19.4991" stroke="#66A4B1" stroke-miterlimit="10" />
+                            <path d="M6.8316 11.0582C4.49788 11.0582 2.60938 9.16965 2.60938 6.83594" stroke="#66A4B1"
+                                stroke-miterlimit="10" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="header__lang">
+                    <button type="button" class="header__lang-change reset-btn">RU</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container container--expand-right">
+                <div class="hero__inner">
+                    <div class="hero__info">
+                        <a href="#" class="hero__logo">
+                            <img src="./images/logo.png" alt="">
+                        </a>
+                        <h1 class="hero__title">
+                            Надёжное <br> оборудование <br> для производства <br> и упаковки <br> <span>лекарств БАДов
+                                космети</span>
+                        </h1>
+                        <div class="hero__actions">
+                            <a href="#" class="hero__btn btn btn--secondary">В каталог</a>
+                            <a href="#" class="hero__btn btn btn--outline-primary-dark">Связаться</a>
+                        </div>
+                    </div>
+                    <div class="hero__gallery">
+                        <div class="hero__slider js-hero-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <picture class="hero__img">
+                                        <img src="./images/hero/hero-01.png" alt="">
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture class="hero__img">
+                                        <img src="./images/hero/hero-02.png" alt="">
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture class="hero__img">
+                                        <img src="./images/hero/hero-03.jpg" alt="">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="hero__slider-action">
+                                <button type="button" class="hero__slider-prev slider-btn js-hero-slider-prev">
+                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14 0C21.7323 0 28 6.26769 28 14C28 21.7323 21.7323 28 14 28C6.26769 28 -1.43051e-06 21.7323 -1.43051e-06 14C-1.43051e-06 6.26769 6.26769 0 14 0ZM14 26.9231C21.126 26.9231 26.9231 21.126 26.9231 14C26.9231 6.874 21.126 1.07692 14 1.07692C6.874 1.07692 1.07692 6.874 1.07692 14C1.07692 21.126 6.874 26.9231 14 26.9231Z"
+                                            fill="#101618" />
+                                        <path
+                                            d="M16.5352 8.99576L11.5307 13.9991L16.5352 19.0025L15.7738 19.765L10.0079 13.9991L15.7738 8.23438L16.5352 8.99576Z"
+                                            fill="#101618" />
+                                    </svg>
+                                </button>
+                                <button type="button" class="hero__slider-prev slider-btn js-hero-slider-next">
+                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                            fill="#101618" />
+                                        <path
+                                            d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                            fill="#101618" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="benefits">
+            <div class="benefits__inner">
+                <picture class="benefits__img">
+                    <img src="./images/benefits/benefits.png" alt="">
+                </picture>
+                <div class="benefits__items">
+                    <div class="benefits__item">
+                        <div class="benefits__item-title">
+                            Создаём производственные линии под ключ
+                        </div>
+                        <a href="#" class="benefits__item-link hover-default">Оставить заявку </a>
+                    </div>
+                    <div class="benefits__item">
+                        <div class="benefits__item-title">
+                            Поставляем отдельные машины и комплексные решения из Европы и Азии
+                        </div>
+                        <a href="#" class="benefits__item-link hover-default">Оставить заявку </a>
+                    </div>
+                    <div class="benefits__item">
+                        <div class="benefits__item-title">Оказываем сервисную поддержкуи обеспечиваем комплектующими
+                        </div>
+                        <a href="#" class="benefits__item-link hover-default">Оставить заявку </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="our-projects">
+            <div class="our-projects__top">
+                <div class="container">
+                    <h2 class="our-projects__title h2">
+                        Реализовали 300+ проектов для разных отраслей
+                    </h2>
+                    <div class="our-projects__nav">
+                        <button type="button" class="our-projects__nav-prev slider-btn js-projects-nav-slider-prev">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14 0C21.7323 0 28 6.26769 28 14C28 21.7323 21.7323 28 14 28C6.26769 28 -1.43051e-06 21.7323 -1.43051e-06 14C-1.43051e-06 6.26769 6.26769 0 14 0ZM14 26.9231C21.126 26.9231 26.9231 21.126 26.9231 14C26.9231 6.874 21.126 1.07692 14 1.07692C6.874 1.07692 1.07692 6.874 1.07692 14C1.07692 21.126 6.874 26.9231 14 26.9231Z"
+                                    fill="#101618" />
+                                <path
+                                    d="M16.5352 8.99576L11.5307 13.9991L16.5352 19.0025L15.7738 19.765L10.0079 13.9991L15.7738 8.23438L16.5352 8.99576Z"
+                                    fill="#101618" />
+                            </svg>
+                        </button>
+                        <button type="button" class="our-projects__nav-next slider-btn js-projects-nav-slider-next">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                    fill="#101618" />
+                                <path
+                                    d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                    fill="#101618" />
+                            </svg>
+                        </button>
+                        <div class="our-projects__nav-slider js-projects-nav-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">Косметика</div>
+                                <div class="swiper-slide">Фармацевтика</div>
+                                <div class="swiper-slide">Пищевая промышленность</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="our-projects__main">
+                <div class="container">
+                    <div class="our-projects__slider js-projects-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="our-projects__item">
+                                    <div class="our-projects__item-title">
+                                        Создание линии по производству жидких лекарственных форм
+                                    </div>
+                                    <div class="our-projects__item-details">
+                                        <div class="our-projects__item-detail">
+                                            <div class="our-projects__item-detail-label">Клиент:</div>
+                                            <div class="our-projects__item-detail-desc">
+                                                AVVA <br> Pharmaceuticals
+                                            </div>
+                                        </div>
+                                        <div class="our-projects__item-detail">
+                                            <div class="our-projects__item-detail-label">Оборудование:</div>
+                                            <div class="our-projects__item-detail-desc">
+                                                INOXPA (Испания)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <picture class="our-projects__item-img">
+                                        <img src="./images/our-projects/project-01.jpg" alt="">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="our-projects__item">
+                                    <div class="our-projects__item-title">
+                                        Создание линии по производству жидких лекарственных форм
+                                    </div>
+                                    <div class="our-projects__item-details">
+                                        <div class="our-projects__item-detail">
+                                            <div class="our-projects__item-detail-label">Клиент:</div>
+                                            <div class="our-projects__item-detail-desc">
+                                                AVVA <br> Pharmaceuticals
+                                            </div>
+                                        </div>
+                                        <div class="our-projects__item-detail">
+                                            <div class="our-projects__item-detail-label">Оборудование:</div>
+                                            <div class="our-projects__item-detail-desc">
+                                                INOXPA (Испания)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <picture class="our-projects__item-img">
+                                        <img src="./images/our-projects/project-01.jpg" alt="">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="our-projects__item">
+                                    <div class="our-projects__item-title">
+                                        Создание линии по производству жидких лекарственных форм
+                                    </div>
+                                    <div class="our-projects__item-details">
+                                        <div class="our-projects__item-detail">
+                                            <div class="our-projects__item-detail-label">Клиент:</div>
+                                            <div class="our-projects__item-detail-desc">
+                                                AVVA <br> Pharmaceuticals
+                                            </div>
+                                        </div>
+                                        <div class="our-projects__item-detail">
+                                            <div class="our-projects__item-detail-label">Оборудование:</div>
+                                            <div class="our-projects__item-detail-desc">
+                                                INOXPA (Испания)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <picture class="our-projects__item-img">
+                                        <img src="./images/our-projects/project-01.jpg" alt="">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="our-projects__item">
+                                    <div class="our-projects__item-title">
+                                        Создание линии по производству жидких лекарственных форм
+                                    </div>
+                                    <div class="our-projects__item-details">
+                                        <div class="our-projects__item-detail">
+                                            <div class="our-projects__item-detail-label">Клиент:</div>
+                                            <div class="our-projects__item-detail-desc">
+                                                AVVA <br> Pharmaceuticals
+                                            </div>
+                                        </div>
+                                        <div class="our-projects__item-detail">
+                                            <div class="our-projects__item-detail-label">Оборудование:</div>
+                                            <div class="our-projects__item-detail-desc">
+                                                INOXPA (Испания)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <picture class="our-projects__item-img">
+                                        <img src="./images/our-projects/project-01.jpg" alt="">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="our-projects__bottom">
+                <a href="#" class="our-projects__btn btn btn--secondary">К полному списку проектов</a>
+            </div>
+        </section>
+        <section class="steps">
+            <div class="container container--wide">
+                <div class="steps__bnr">
+                    <picture class="steps__bnr-img">
+                        <img src="./images/steps/steps-bnr.jpg" alt="">
+                    </picture>
+                    <div class="steps__bnr-title">
+                        Берём на себя весь цикл работ по
+                        запуску и сопровождению оборудования
+                    </div>
+                </div>
+                <div class="steps__slider js-steps-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="steps__item">
+                                <div class="steps__item-info">
+                                    <div class="steps__item-title">
+                                        Разработаем проект поставки в соответствии с вашей задачей
+                                    </div>
+                                    <div class="steps__item-desc">
+                                        Подберём оптимальную конфигурацию оборудования с учётом производительности,
+                                        компоновки линии, бюджета и специфики продукта.
+                                        При необходимости вместе с вами посетим завод-производитель
+                                    </div>
+                                </div>
+                                <div class="steps__item-num">01</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="steps__item">
+                                <div class="steps__item-info">
+                                    <div class="steps__item-title">
+                                        Бережно и быстро доставим оборудование на площадку
+                                    </div>
+                                    <div class="steps__item-desc">
+                                        Контролируем логистику, сроки и комплектность
+                                        поставки, чтобы оборудование прибыло
+                                        на объект без задержек и в полной сохранности
+                                    </div>
+                                </div>
+                                <div class="steps__item-num">02</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="steps__item">
+                                <div class="steps__item-info">
+                                    <div class="steps__item-title">
+                                        Произведём шеф-монтаж и пусконаладку
+                                    </div>
+                                    <div class="steps__item-desc">
+                                        А также проведем инструктаж для ваших сотрудников
+                                        по эксплуатации оборудования и программного обеспечения
+                                    </div>
+                                </div>
+                                <div class="steps__item-num">03</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="steps__item">
+                                <div class="steps__item-info">
+                                    <div class="steps__item-title">
+                                        Возьмём оборудование на обслуживание
+                                    </div>
+                                    <div class="steps__item-desc">
+                                        Выполняем диагностику, регламентные
+                                        работы, замену комплектующих и помогаем быстро
+                                        устранять возникающие неполадки
+                                    </div>
+                                </div>
+                                <div class="steps__item-num">04</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="steps__item">
+                                <div class="steps__item-info">
+                                    <div class="steps__item-title">
+                                        Остаёмся на связи после запуска
+                                    </div>
+                                    <div class="steps__item-desc">
+                                        Консультируем по эксплуатации,
+                                        настройкам и техническим вопросам, чтобы линия
+                                        работала стабильно и без простоев
+                                    </div>
+                                </div>
+                                <div class="steps__item-num">05</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="steps__item steps__item--primary">
+                                <div class="steps__item-info">
+                                    <div class="steps__item-title">
+                                        Рассматриваете запуск новой линии или модернизацию существующей?
+                                    </div>
+                                    <div class="steps__item-desc">
+                                        Расскажите подробнее о вашей задаче — сориентируем
+                                        по оборудованию, этапам производства и дальнейшему сопровождению
+                                    </div>
+                                </div>
+                                <a href="#" class="steps__item-btn btn btn--white btn--wide">Обсудить задачу с
+                                    менеджером</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination js-steps-slider-pagination"></div>
+                </div>
+            </div>
+        </section>
+        <section class="our-clients">
+            <div class="container container--wide">
+                <h2 class="our-clients__title h2">
+                    С нами работают ведущие компании
+                    фармацевтической, косметической
+                    и пищевой отраслей
+                </h2>
+                <div class="our-clients__sliders">
+                    <div class="our-clients__slider js-our-clients-forward-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-01.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-02.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-03.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-04.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-05.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-06.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-07.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-08.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-09.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-10.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-01.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-02.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-03.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-04.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-05.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-06.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-07.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-08.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-09.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-10.png" alt="">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="our-clients__slider js-our-clients-backward-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-01.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-02.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-03.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-04.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-05.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-06.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-07.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-08.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-09.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-10.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-01.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-02.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-03.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-04.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-05.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-06.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-07.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-08.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-09.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="our-clients__img">
+                                    <img src="./images/clients/client-10.png" alt="">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="our-clients__desc">
+                    Их выбор — лучшее подтверждение нашей экспертизы  в решении сложных технологических задач
+                </div>
+            </div>
+        </section>
+        <section class="promo-bnr">
+            <div class="container container--wide">
+                <div class="promo-bnr__inner">
+                    <picture class="promo-bnr__img">
+                        <img src="./images/promo-bnr/bnr.png" alt="">
+                    </picture>
+                    <div class="promo-bnr__head">
+                        <h2 class="promo-bnr__title h2">
+                            Компания ИСТ-ПАК – <br> постоянный участник <br> ключевых отраслевых выставок
+                        </h2>
+                        <div class="promo-bnr__desc">Заходите на наш стенд:</div>
+                    </div>
+
+                    <div class="promo-bnr__events">
+                        <a href="#" class="promo-bnr__event">
+                            <div class="promo-bnr__event-icon"></div>
+                            <div class="promo-bnr__event-title">в июне – на RosUpack </div>
+                        </a>
+                        <a href="#" class="promo-bnr__event">
+                            <div class="promo-bnr__event-icon"></div>
+                            <div class="promo-bnr__event-title">в ноябре – на Pharmtech & Ingredients</div>
+                        </a>
+                    </div>
+                    <div class="promo-bnr__partners">
+                        <a href="#" class="promo-bnr__partner-logo">
+                            <img src="./images/promo-bnr/brand-01.png" alt="">
+                        </a>
+                        <a href="#" class="promo-bnr__partner-logo">
+                            <img src="./images/promo-bnr/brand-02.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="news">
+            <div class="container container--expand-right">
+                <div class="news__inner">
+                    <div class="news__left">
+                        <div class="news__head">
+                            <h2 class="news__title h2">Новости</h2>
+                            <a href="#" class="news__all hover-default">Все новости</a>
+                        </div>
+                        <div class="news__list">
+                            <a href="#" class="news__item">
+                                <div class="news__item-info">
+                                    <div class="news__item-date">25.02.2026</div>
+                                    <div class="news__item-title">Почему закупка фармоборудования — это управление
+                                        рисками,
+                                        а не просто сделка</div>
+                                    <div class="news__item-desc">
+                                        Интервью с Александром Гринченко, генеральным директором ИСТ-ПАК, о новых
+                                        правилах
+                                        работы на рынке фармацевтического оборудования и факторах, влияющих на успех
+                                        проектов в текущих условиях
+                                    </div>
+                                </div>
+                                <div class="news__item-icon"></div>
+                            </a>
+                            <a href="#" class="news__item news__item--secondary">
+                                <div class="news__item-info">
+                                    <div class="news__item-date">25.02.2026</div>
+                                    <div class="news__item-title">Почему закупка фармоборудования — это управление
+                                        рисками,
+                                        а не просто сделка</div>
+                                    <div class="news__item-desc">
+                                        Интервью с Александром Гринченко, генеральным директором ИСТ-ПАК, о новых
+                                        правилах
+                                        работы на рынке фармацевтического оборудования и факторах, влияющих на успех
+                                        проектов в текущих условиях
+                                    </div>
+                                </div>
+                                <div class="news__item-icon"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news__right">
+                        <a href="#" class="news__main">
+                            <picture class="news__main-bg">
+                                <img src="./images/news/main.jpg" alt="">
+                            </picture>
+                            <div class="news__main-info">
+                                <div class="news__main-date">17.02.2026</div>
+                                <div class="news__main-title">Комплексная поставка металлодетектора Ceia и весового
+                                    контроля
+                                    iW от Sejong Pharmatech</div>
+                                <div class="news__main-desc">
+                                    Интервью с Александром Гринченко, генеральным директором ИСТ-ПАК, о новых правилах
+                                    работы на рынке
+                                    фармацевтического оборудования и факторах, влияющих на успех проектов в текущих
+                                    условиях
+                                </div>
+                            </div>
+                            <div class="news__main-icon"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="order-call">
+            <div class="container">
+                <div class="order-call__inner">
+                    <picture class="order-call__img">
+                        <img src="./images/order-call/bnr.png" alt="">
+                    </picture>
+                    <div class="order-call__info">
+                        <div class="order-call__head">
+                            <h2 class="order-call__title h2">
+                                Заполните онлайн-заявку, чтобы рассказать о вашей задаче
+                            </h2>
+                            <div class="order-call__desc">
+                                или просто проконсультироваться (это бесплатно)
+                            </div>
+                        </div>
+                        <form action="" class="order-call__form">
+                            <div class="order-call__form-inputs">
+                                <div class="form-group">
+                                    <label for="" class="form-label">ФИО*</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="form-label">Компания*</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="form-label">Телефон*</label>
+                                    <input type="tel" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="form-label">Адрес электронной почты*</label>
+                                    <input type="email" class="form-control">
+                                </div>
+                                <div class="form-group form-group--span-2">
+                                    <label for="" class="form-label">Введите ваш запрос </label>
+                                    <textarea name="" id="" class="form-control" rows="5" cols="10"></textarea>
+                                </div>
+                            </div>
+                            <div class="order-call__form-bottom">
+                                <div class="form-checkbox">
+                                    <input type="checkbox" name="" id="id_checkbox_condition">
+                                    <label for="id_checkbox_condition">
+                                        <span>
+                                            Нажимая кнопку «Отправить заявку», я даю свое согласие на обработку моих
+                                            персональных данных, в соответствии с ФЗ от 27.07.2006 года №152-ФЗ «О
+                                            персональных
+                                            данных», на условиях и для целей, определенных в
+                                            <a href="#">Политике обработки персональных данных</a>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="order-call__form-action">
+                                    <button class="order-call__form-btn btn btn--wide btn--secondary">Отправить
+                                        заявку</button>
+                                    <div class="form-tip">*поля, обязательные для заполнения</div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact-us">
+            <div class="container">
+                <div class="contact-us__inner">
+                    <h2 class="contact-us__title h2">
+                        Или свяжитесь с нами удобным способом
+                    </h2>
+                    <div class="contact-us__action">
+                        <a href="tel:+7(499)3906258"
+                            class="contact-us__link btn btn--secondary btn--wide">+7 (499) 390-62-58</a>
+                        <a href="mailto:sales@eapack.ru"
+                            class="contact-us__link btn btn--secondary btn--wide">sales@eapack.ru</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__main">
+            <div class="container">
+                <div class="footer__col">
+                    <a href="#" class="footer__logo">
+                        <img src="./images/logo.png" alt="Easpack">
+                    </a>
+                    <div class="footer__desc">Поставки промышленных автоматизированных линий</div>
+                    <nav class="footer__nav">
+                        <div class="footer__nav-col">
+                            <a href="#" class="footer__nav-head">о компании</a>
+                            <a href="#" class="footer__nav-link">Новости и события</a>
+                            <a href="#" class="footer__nav-link">Полезные материалы</a>
+                            <a href="#" class="footer__nav-link">Вакансии</a>
+                        </div>
+                        <div class="footer__nav-col">
+                            <a href="#" class="footer__nav-head hover-default">оборудование</a>
+                            <a href="#" class="footer__nav-link hover-default">Оборудование для фармацевтического производства</a>
+                            <a href="#" class="footer__nav-link hover-default">Оборудование для косметического производства</a>
+                            <a href="#" class="footer__nav-link hover-default">Упаковочное оборудование</a>
+                            <a href="#" class="footer__nav-link hover-default">Оборудование для пищевого и химического
+                                производства</a>
+                            <a href="#" class="footer__nav-link hover-default">Запчасти, форматная оснастка, пресс-инструмент</a>
+                            <a href="#" class="footer__nav-link hover-default">Оборудование в наличии </a>
+                            <a href="#" class="footer__nav-link hover-default">Оборудование бывшее в употреблении</a>
+                        </div>
+                        <div class="footer__nav-col">
+                            <a href="#" class="footer__nav-head hover-default">запчасти и Сервис</a>
+                            <a href="#" class="footer__nav-head hover-default">проекты</a>
+                        </div>
+                    </nav>
+                    <div class="footer__copy">
+                        2023 - 2026 eapack | Политика обработки персональных данных | Политика обработки Cookie-файлов |
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <div class="footer__sub">
+                        <div class="subscribe">
+                            <div class="subscribe__title h3">Отправляем только полезные письма</div>
+                            <form action="" class="subscribe__form">
+                                <div class="subscribe__form-inputs">
+                                    <div class="form-group">
+                                        <label for="" class="form-label">Имя*</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="form-label">Адрес электронной почты*</label>
+                                        <input type="email" class="form-control">
+                                    </div>
+                                </div>
+                                <button type="submit"
+                                    class="subscribe__form-btn btn btn--wide btn--secondary">Подписаться на
+                                    рассылку</button>
+                                <div class="subscribe__form-bottom">
+                                    <div class="form-checkbox form-checkbox--alt">
+                                        <input type="checkbox" name="" id="id_checkbox_marketing_condition_01">
+                                        <label for="id_checkbox_marketing_condition_01">
+                                            Я согласен получать рекламные предложения и новости
+                                        </label>
+                                    </div>
+                                    <div class="form-checkbox form-checkbox--alt">
+                                        <input type="checkbox" name="" id="id_checkbox_marketing_condition_02">
+                                        <label for="id_checkbox_marketing_condition_02">
+                                            Я согласен получать рекламные предложения и новости
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="footer__presentation">
+                        <a href="#" class="footer__presentation-link hover-default">
+                            <div class="footer__presentation-icon">
+                                <img src="./images/icons/pdf.svg" alt="">
+                            </div>
+                            <div class="footer__presentation-title h3">Презентация о компании</div>
+                        </a>
+                        <div class="footer__presentation-desc">
+                            Компания ИСТ-ПАК осуществляет комплексные поставки оборудования для фармацевтической,
+                            косметической,
+                            пищевой и химической отраслей промышленности. Мы специализируемся на оснащении производств
+                            высокотехнологичным оборудованием для выпуска лекарственных форм (твердых, жидких, мягких)
+                            и упаковки препаратов, а также обеспечиваем технологиями производителей других критически
+                            важных отраслей
+                        </div>
+                    </div>
+                    <div class="footer__socials">
+                        <div class="footer__socials-title h3">Мы в соцсетях</div>
+                        <div class="footer__socials-list">
+                            <a href="#" class="footer__socials-item">
+                                <img src="./images/icons/dzen.svg" alt="">
+                            </a>
+                            <a href="#" class="footer__socials-item">
+                                <img src="./images/icons/youtube.svg" alt="">
+                            </a>
+                            <a href="#" class="footer__socials-item">
+                                <img src="./images/icons/telegram.svg" alt="">
+                            </a>
+                            <a href="#" class="footer__socials-item">
+                                <img src="./images/icons/whatsapp.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__title h3">Контакты</div>
+                <div class="footer__company">ООО «ИСТ-ПАК» ИНН 9709048753</div>
+                <a href="tel:+74993906258" class="footer__link hover-default">+7 (499) 390-62-58</a>
+                <a href="mailto:sales@eapack.ru" class="footer__link hover-default">sales@eapack.ru</a>
+                <div class="footer__address">109544, Россия, г. Москва, ул. Рабочая, д. 93, стр. 2, офис 400</div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="./js/libs/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
