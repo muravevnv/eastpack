@@ -3,7 +3,7 @@
 
     &__inner {
         display: grid;
-        grid-template-columns: auto calc(55vw - 16px);
+        grid-template-columns: auto calc(55vw - 32px);
 
         @media screen and (max-width: 1023.98px) {
             display: flex;
