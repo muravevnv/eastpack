@@ -109,8 +109,8 @@
                 content: '';
                 width: 28px;
                 height: 28px;
-                mask: url('../../images/icons/slider-chevron-right.svg') center center / var(--iconSize) no-repeat;
-                -webkit-mask: url('../../images/icons/slider-chevron-right.svg') center center / var(--iconSize) no-repeat;
+                mask: url('../images/icons/slider-chevron-right.svg') center center / var(--iconSize) no-repeat;
+                -webkit-mask: url('../images/icons/slider-chevron-right.svg') center center / var(--iconSize) no-repeat;
                 background-color: var(--color-dark);
             }
         }
