@@ -50,12 +50,55 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (document.querySelector('.js-projects-nav-slider')) {
+
+        function handleSlideChange(swiper) {
+            const slides = swiper.slides;
+            const activeIndex = swiper.activeIndex;
+
+            if (slides && slides[activeIndex]) {
+                const activeSlide = slides[activeIndex];
+                const targetId = activeSlide.getAttribute('data-nav-btn');
+
+                if (targetId) {
+                    switchActiveSection(targetId);
+                }
+            }
+        }
+
+        function switchActiveSection(targetId) {
+            const sections = document.querySelectorAll('[data-section]');
+
+            if (sections.length === 0) {
+                return;
+            }
+
+            sections.forEach(section => {
+                const sectionId = section.getAttribute('data-section');
+
+                if (sectionId === targetId) {
+                    section.classList.add('is-active');
+                } else {
+                    section.classList.remove('is-active');
+                }
+            });
+        }
+
         const stepsSlider = new Swiper('.js-projects-nav-slider', {
             slidesPerView: 1,
             initialSlide: 1,
             navigation: {
                 prevEl: '.js-projects-nav-slider-prev',
                 nextEl: '.js-projects-nav-slider-next',
+            },
+            on: {
+                init: function () {
+                    setTimeout(() => {
+                        handleSlideChange(this);
+                    }, 50);
+                },
+                slideChange: function () {
+                    handleSlideChange(this);
+                }
             }
         })
     }
@@ -63,7 +106,221 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.js-projects-slider')) {
         const stepsSlider = new Swiper('.js-projects-slider', {
             slidesPerView: 'auto',
-            spaceBetween: 0,
+            slideToClickedSlide: true,
         })
     }
+
+
+    if (document.querySelector('.js-hardware-categories-slider')) {
+        const stepsSlider = new Swiper('.js-hardware-categories-slider', {
+            slidesPerView: 'auto',
+            spaceBetween: 8,
+            freeMode: true,
+
+            1024: {
+                spaceBetween: 16,
+            }
+        })
+    }
+
+    const partnersData = {
+        "1": {
+            logo: "./images/partners/logo-01.png",
+            name: "Sejong Pharmatech,",
+            country: "Южная Корея",
+            desc: "Производитель технологического оборудования для фармацевтического, пищевого и химического производства",
+            labels: ["таблетпрессы", "оборудование для нанесения покрытий", "машины наполнения капсул"]
+        },
+        "2": {
+            logo: "./images/partners/logo-02.png",
+            name: "SAP Systems,",
+            country: "Германия",
+            desc: "Разработка комплексных ERP-решений для автоматизации бизнес-процессов крупных предприятий.",
+            labels: ["программное обеспечение", "облачные сервисы"]
+        },
+        "3": {
+            logo: "./images/partners/logo-03.png",
+            name: "Bosch Packaging,",
+            country: "Германия",
+            desc: "Поставка упаковочных линий для ампул, флаконов и шприцев.",
+            labels: ["фасовка", "упаковка", "стерилизация", "блистеры"]
+        }
+    };
+
+    const filterButtons = document.querySelectorAll('.partners__filters-btn');
+
+    const partnersList = document.querySelector('.partners__list');
+    const partnersItems = document.querySelectorAll('.partners__item');
+    const popup = document.querySelector('.partners__popup');
+
+    const popupClose = popup.querySelector('.partners__popup-close');
+    const popupImg = popup.querySelector('.partners__popup-logo img');
+    const popupName = popup.querySelector('.partners__popup-name');
+    const popupCountry = popup.querySelector('.partners__popup-country');
+    const popupDesc = popup.querySelector('.partners__popup-desc');
+    const popupLabelsContainer = popup.querySelector('.partners__popup-labels');
+
+    const closePopup = () => {
+        popup.classList.remove('is-open');
+        if (partnersList) {
+            partnersList.classList.remove('is-locked');
+        }
+    };
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            closePopup();
+
+            filterButtons.forEach(btn => btn.classList.remove('is-active'));
+            button.classList.add('is-active');
+
+            const currentFilter = button.getAttribute('data-filter');
+
+            partnersItems.forEach(item => {
+                const itemCountry = item.getAttribute('data-country');
+
+                if (currentFilter === 'all' || itemCountry === currentFilter) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    partnersItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const id = item.getAttribute('data-id');
+            const data = partnersData[id];
+
+            if (!data) return;
+
+            if (popupImg) {
+                popupImg.src = data.logo;
+                popupImg.alt = data.name;
+            }
+            if (popupName) popupName.textContent = data.name;
+            if (popupCountry) popupCountry.textContent = data.country;
+            if (popupDesc) popupDesc.textContent = data.desc;
+
+            if (popupLabelsContainer) {
+                popupLabelsContainer.innerHTML = '';
+
+                data.labels.forEach(labelText => {
+                    const labelLink = document.createElement('a');
+                    labelLink.href = '#';
+                    labelLink.className = 'partners__popup-label';
+                    labelLink.textContent = labelText;
+                    popupLabelsContainer.appendChild(labelLink);
+                });
+            }
+
+            const cardLeft = item.offsetLeft;
+            const cardTop = item.offsetTop;
+            const cardWidth = item.offsetWidth;
+            const containerWidth = partnersList ? partnersList.offsetWidth : 0;
+
+            // Проверяем, находится ли карточка в правой половине контейнера (4, 5, 6 колонки)
+            if (cardLeft + (cardWidth / 2) > containerWidth / 2) {
+                // Если справа: выравниваем правый край попапа по правому краю карточки
+                // С учетом того, что попап занимает ровно 50% от ширины родителя
+                const targetLeft = (cardLeft + cardWidth) - (containerWidth * 0.5);
+                popup.style.left = `${targetLeft}px`;
+            } else {
+                // Если слева (1, 2, 3 колонки): выравниваем левый край попапа по левому краю карточки
+                popup.style.left = `${cardLeft - 1}px`;
+            }
+
+            // Задаем верхнюю координату (вровень с карточкой)
+            popup.style.top = `${cardTop - 1}px`;
+
+            // Шаг Г: Активация классов видимости
+            popup.classList.add('is-open');
+            if (partnersList) {
+                partnersList.classList.add('is-locked');
+            }
+        });
+    });
+
+    if (popupClose) {
+        popupClose.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closePopup();
+        });
+    }
+
+    document.addEventListener('click', (e) => {
+        if (popup && !popup.contains(e.target) && !e.target.closest('.partners__item')) {
+            closePopup();
+        }
+    });
+
+    function initTabs() {
+        const tabButtons = document.querySelectorAll('[data-tabs-btn]');
+        const tabSections = document.querySelectorAll('[data-tabs-section]');
+
+        if (tabButtons.length > 0 && tabSections.length > 0) {
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Получаем значение ключа текущей кнопки (например: "about")
+                    const targetTabPath = button.getAttribute('data-tabs-btn');
+
+                    // Шаг А: Переключаем активный класс для кнопок
+                    tabButtons.forEach(btn => btn.classList.remove('is-active'));
+                    button.classList.add('is-active');
+
+                    // Шаг Б: Переключаем активный класс для секций контента
+                    tabSections.forEach(section => {
+                        const sectionPath = section.getAttribute('data-tabs-section');
+
+                        // Если значение секции совпадает с нажатой кнопкой — показываем её
+                        if (sectionPath === targetTabPath) {
+                            section.classList.add('is-active'); // Используйте класс, который вам ближе по верстке
+                        } else {
+                            section.classList.remove('is-active');
+                        }
+                    });
+                });
+            });
+        }
+    }
+
+    initTabs();
+
+    function initSpollers() {
+
+        const spollers = document.querySelectorAll('[data-spoller]');
+
+        if (spollers.length > 0) {
+            spollers.forEach(spoller => {
+                const head = spoller.querySelector('[data-spoller="head"]');
+                const body = spoller.querySelector('[data-spoller="body"]');
+
+                if (!head || !body) return;
+
+                head.addEventListener('click', () => {
+                    const isOpen = spoller.classList.contains('is-open');
+
+                    spollers.forEach(otherSpoller => {
+                        if (otherSpoller !== spoller) {
+                            otherSpoller.classList.remove('is-open');
+                            const otherBody = otherSpoller.querySelector('[data-spoller="body"]');
+                            if (otherBody) otherBody.style.maxHeight = null;
+                        }
+                    });
+
+                    if (isOpen) {
+                        spoller.classList.remove('is-open');
+                        body.style.maxHeight = null;
+                    } else {
+                        spoller.classList.add('is-open');
+                        body.style.maxHeight = body.scrollHeight + 'px';
+                    }
+                });
+            });
+        }
+    }
+
+    initSpollers();
 })

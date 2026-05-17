@@ -1,9 +1,9 @@
 .our-projects {
     overflow: hidden;
-    padding: 120px 0;
+    padding: 120px 0 0;
 
     @media screen and (max-width: 1023.98px) {
-        padding: 40px 0;
+        padding: 40px 0 0;
     }
 
     &__title {
@@ -73,6 +73,14 @@
             .swiper-slide-active {
                 color: var(--color-black);
             }
+        }
+    }
+
+    &__section {
+        display: none;
+
+        &.is-active {
+            display: block;
         }
     }
 

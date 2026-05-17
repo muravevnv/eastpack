@@ -40,6 +40,14 @@
                             </li>
                         </ul>
                     </nav>
+
+                    <button class="header__burger reset-btn">
+                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line y1="1" x2="18" y2="1" stroke="black" stroke-width="2" />
+                            <line y1="7" x2="18" y2="7" stroke="black" stroke-width="2" />
+                            <line y1="13" x2="18" y2="13" stroke="black" stroke-width="2" />
+                        </svg>
+                    </button>
                 </div>
 
                 <div class="header__contacts">
@@ -186,9 +194,9 @@
                         </button>
                         <div class="our-projects__nav-slider js-projects-nav-slider">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">Косметика</div>
-                                <div class="swiper-slide">Фармацевтика</div>
-                                <div class="swiper-slide">Пищевая промышленность</div>
+                                <div class="swiper-slide" data-nav-btn="1">Косметика</div>
+                                <div class="swiper-slide" data-nav-btn="2">Фармацевтика</div>
+                                <div class="swiper-slide" data-nav-btn="3">Пищевая промышленность</div>
                             </div>
                         </div>
                     </div>
@@ -196,102 +204,236 @@
             </div>
             <div class="our-projects__main">
                 <div class="container">
-                    <div class="our-projects__slider js-projects-slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="our-projects__item">
-                                    <div class="our-projects__item-title">
-                                        Создание линии по производству жидких лекарственных форм
-                                    </div>
-                                    <div class="our-projects__item-details">
-                                        <div class="our-projects__item-detail">
-                                            <div class="our-projects__item-detail-label">Клиент:</div>
-                                            <div class="our-projects__item-detail-desc">
-                                                AVVA <br> Pharmaceuticals
+                    <div class="our-projects__section" data-section="1">
+                        <div class="our-projects__slider js-projects-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="our-projects__item">
+                                        <div class="our-projects__item-title">
+                                            Создание линии по производству жидких лекарственных форм
+                                        </div>
+                                        <div class="our-projects__item-details">
+                                            <div class="our-projects__item-detail">
+                                                <div class="our-projects__item-detail-label">Клиент:</div>
+                                                <div class="our-projects__item-detail-desc">
+                                                    AVVA <br> Pharmaceuticals
+                                                </div>
+                                            </div>
+                                            <div class="our-projects__item-detail">
+                                                <div class="our-projects__item-detail-label">Оборудование:</div>
+                                                <div class="our-projects__item-detail-desc">
+                                                    INOXPA (Испания)
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="our-projects__item-detail">
-                                            <div class="our-projects__item-detail-label">Оборудование:</div>
-                                            <div class="our-projects__item-detail-desc">
-                                                INOXPA (Испания)
+                                        <picture class="our-projects__item-img">
+                                            <img src="./images/our-projects/project-01.jpg" alt="">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="our-projects__item">
+                                        <div class="our-projects__item-title">
+                                            Создание линии по производству жидких лекарственных форм
+                                        </div>
+                                        <div class="our-projects__item-details">
+                                            <div class="our-projects__item-detail">
+                                                <div class="our-projects__item-detail-label">Клиент:</div>
+                                                <div class="our-projects__item-detail-desc">
+                                                    AVVA <br> Pharmaceuticals
+                                                </div>
+                                            </div>
+                                            <div class="our-projects__item-detail">
+                                                <div class="our-projects__item-detail-label">Оборудование:</div>
+                                                <div class="our-projects__item-detail-desc">
+                                                    INOXPA (Испания)
+                                                </div>
                                             </div>
                                         </div>
+                                        <picture class="our-projects__item-img">
+                                            <img src="./images/our-projects/project-01.jpg" alt="">
+                                        </picture>
                                     </div>
-                                    <picture class="our-projects__item-img">
-                                        <img src="./images/our-projects/project-01.jpg" alt="">
-                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="our-projects__item">
+                                        <div class="our-projects__item-title">
+                                            Создание линии по производству жидких лекарственных форм
+                                        </div>
+                                        <div class="our-projects__item-details">
+                                            <div class="our-projects__item-detail">
+                                                <div class="our-projects__item-detail-label">Клиент:</div>
+                                                <div class="our-projects__item-detail-desc">
+                                                    AVVA <br> Pharmaceuticals
+                                                </div>
+                                            </div>
+                                            <div class="our-projects__item-detail">
+                                                <div class="our-projects__item-detail-label">Оборудование:</div>
+                                                <div class="our-projects__item-detail-desc">
+                                                    INOXPA (Испания)
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <picture class="our-projects__item-img">
+                                            <img src="./images/our-projects/project-01.jpg" alt="">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="our-projects__item">
+                                        <div class="our-projects__item-title">
+                                            Создание линии по производству жидких лекарственных форм
+                                        </div>
+                                        <div class="our-projects__item-details">
+                                            <div class="our-projects__item-detail">
+                                                <div class="our-projects__item-detail-label">Клиент:</div>
+                                                <div class="our-projects__item-detail-desc">
+                                                    AVVA <br> Pharmaceuticals
+                                                </div>
+                                            </div>
+                                            <div class="our-projects__item-detail">
+                                                <div class="our-projects__item-detail-label">Оборудование:</div>
+                                                <div class="our-projects__item-detail-desc">
+                                                    INOXPA (Испания)
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <picture class="our-projects__item-img">
+                                            <img src="./images/our-projects/project-01.jpg" alt="">
+                                        </picture>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="our-projects__item">
-                                    <div class="our-projects__item-title">
-                                        Создание линии по производству жидких лекарственных форм
-                                    </div>
-                                    <div class="our-projects__item-details">
-                                        <div class="our-projects__item-detail">
-                                            <div class="our-projects__item-detail-label">Клиент:</div>
-                                            <div class="our-projects__item-detail-desc">
-                                                AVVA <br> Pharmaceuticals
+                        </div>
+                    </div>
+                    <div class="our-projects__section is-active" data-section="2">
+                        <div class="our-projects__slider js-projects-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="our-projects__item">
+                                        <div class="our-projects__item-title">
+                                            Создание линии по производству жидких лекарственных форм
+                                        </div>
+                                        <div class="our-projects__item-details">
+                                            <div class="our-projects__item-detail">
+                                                <div class="our-projects__item-detail-label">Клиент:</div>
+                                                <div class="our-projects__item-detail-desc">
+                                                    AVVA <br> Pharmaceuticals
+                                                </div>
+                                            </div>
+                                            <div class="our-projects__item-detail">
+                                                <div class="our-projects__item-detail-label">Оборудование:</div>
+                                                <div class="our-projects__item-detail-desc">
+                                                    INOXPA (Испания)
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="our-projects__item-detail">
-                                            <div class="our-projects__item-detail-label">Оборудование:</div>
-                                            <div class="our-projects__item-detail-desc">
-                                                INOXPA (Испания)
+                                        <picture class="our-projects__item-img">
+                                            <img src="./images/our-projects/project-01.jpg" alt="">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="our-projects__item">
+                                        <div class="our-projects__item-title">
+                                            Создание линии по производству жидких лекарственных форм
+                                        </div>
+                                        <div class="our-projects__item-details">
+                                            <div class="our-projects__item-detail">
+                                                <div class="our-projects__item-detail-label">Клиент:</div>
+                                                <div class="our-projects__item-detail-desc">
+                                                    AVVA <br> Pharmaceuticals
+                                                </div>
+                                            </div>
+                                            <div class="our-projects__item-detail">
+                                                <div class="our-projects__item-detail-label">Оборудование:</div>
+                                                <div class="our-projects__item-detail-desc">
+                                                    INOXPA (Испания)
+                                                </div>
                                             </div>
                                         </div>
+                                        <picture class="our-projects__item-img">
+                                            <img src="./images/our-projects/project-01.jpg" alt="">
+                                        </picture>
                                     </div>
-                                    <picture class="our-projects__item-img">
-                                        <img src="./images/our-projects/project-01.jpg" alt="">
-                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="our-projects__item">
+                                        <div class="our-projects__item-title">
+                                            Создание линии по производству жидких лекарственных форм
+                                        </div>
+                                        <div class="our-projects__item-details">
+                                            <div class="our-projects__item-detail">
+                                                <div class="our-projects__item-detail-label">Клиент:</div>
+                                                <div class="our-projects__item-detail-desc">
+                                                    AVVA <br> Pharmaceuticals
+                                                </div>
+                                            </div>
+                                            <div class="our-projects__item-detail">
+                                                <div class="our-projects__item-detail-label">Оборудование:</div>
+                                                <div class="our-projects__item-detail-desc">
+                                                    INOXPA (Испания)
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <picture class="our-projects__item-img">
+                                            <img src="./images/our-projects/project-01.jpg" alt="">
+                                        </picture>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="our-projects__item">
-                                    <div class="our-projects__item-title">
-                                        Создание линии по производству жидких лекарственных форм
-                                    </div>
-                                    <div class="our-projects__item-details">
-                                        <div class="our-projects__item-detail">
-                                            <div class="our-projects__item-detail-label">Клиент:</div>
-                                            <div class="our-projects__item-detail-desc">
-                                                AVVA <br> Pharmaceuticals
+                        </div>
+                    </div>
+                    <div class="our-projects__section" data-section="3">
+                        <div class="our-projects__slider js-projects-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="our-projects__item">
+                                        <div class="our-projects__item-title">
+                                            Создание линии по производству жидких лекарственных форм
+                                        </div>
+                                        <div class="our-projects__item-details">
+                                            <div class="our-projects__item-detail">
+                                                <div class="our-projects__item-detail-label">Клиент:</div>
+                                                <div class="our-projects__item-detail-desc">
+                                                    AVVA <br> Pharmaceuticals
+                                                </div>
+                                            </div>
+                                            <div class="our-projects__item-detail">
+                                                <div class="our-projects__item-detail-label">Оборудование:</div>
+                                                <div class="our-projects__item-detail-desc">
+                                                    INOXPA (Испания)
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="our-projects__item-detail">
-                                            <div class="our-projects__item-detail-label">Оборудование:</div>
-                                            <div class="our-projects__item-detail-desc">
-                                                INOXPA (Испания)
-                                            </div>
-                                        </div>
+                                        <picture class="our-projects__item-img">
+                                            <img src="./images/our-projects/project-01.jpg" alt="">
+                                        </picture>
                                     </div>
-                                    <picture class="our-projects__item-img">
-                                        <img src="./images/our-projects/project-01.jpg" alt="">
-                                    </picture>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="our-projects__item">
-                                    <div class="our-projects__item-title">
-                                        Создание линии по производству жидких лекарственных форм
-                                    </div>
-                                    <div class="our-projects__item-details">
-                                        <div class="our-projects__item-detail">
-                                            <div class="our-projects__item-detail-label">Клиент:</div>
-                                            <div class="our-projects__item-detail-desc">
-                                                AVVA <br> Pharmaceuticals
+                                <div class="swiper-slide">
+                                    <div class="our-projects__item">
+                                        <div class="our-projects__item-title">
+                                            Создание линии по производству жидких лекарственных форм
+                                        </div>
+                                        <div class="our-projects__item-details">
+                                            <div class="our-projects__item-detail">
+                                                <div class="our-projects__item-detail-label">Клиент:</div>
+                                                <div class="our-projects__item-detail-desc">
+                                                    AVVA <br> Pharmaceuticals
+                                                </div>
+                                            </div>
+                                            <div class="our-projects__item-detail">
+                                                <div class="our-projects__item-detail-label">Оборудование:</div>
+                                                <div class="our-projects__item-detail-desc">
+                                                    INOXPA (Испания)
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="our-projects__item-detail">
-                                            <div class="our-projects__item-detail-label">Оборудование:</div>
-                                            <div class="our-projects__item-detail-desc">
-                                                INOXPA (Испания)
-                                            </div>
-                                        </div>
+                                        <picture class="our-projects__item-img">
+                                            <img src="./images/our-projects/project-01.jpg" alt="">
+                                        </picture>
                                     </div>
-                                    <picture class="our-projects__item-img">
-                                        <img src="./images/our-projects/project-01.jpg" alt="">
-                                    </picture>
                                 </div>
                             </div>
                         </div>
@@ -300,6 +442,594 @@
             </div>
             <div class="our-projects__bottom">
                 <a href="#" class="our-projects__btn btn btn--secondary">К полному списку проектов</a>
+            </div>
+        </section>
+        <section class="hardware">
+            <div class="container">
+                <div class="hardware__head">
+                    <h2 class="hardware__title h2">Поставляем оборудование прямо с завода-изготовителя в кратчайшие
+                        сроки</h2>
+                    <div class="hardware__desc">А некоторые позиции есть на нашем складе в Москве</div>
+                </div>
+                <div class="hardware__categories js-hardware-categories-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <button type="button" class="hardware__categories-btn reset-btn is-active"
+                                data-tabs-btn="1">
+                                <span class="hardware__categories-btn-title">Фармацевтическое оборудование</span>
+                                <img src="./images/hardware/categories-01.png" class="hardware__categories-btn-img"
+                                    alt="">
+                            </button>
+                        </div>
+                        <div class="swiper-slide">
+                            <button type="button" class="hardware__categories-btn reset-btn" data-tabs-btn="2">
+                                <span class="hardware__categories-btn-title">Оборудование для производства
+                                    косметики</span>
+                                <img src="./images/hardware/categories-02.png" class="hardware__categories-btn-img"
+                                    alt="">
+                            </button>
+                        </div>
+                        <div class="swiper-slide">
+                            <button type="button" class="hardware__categories-btn reset-btn" data-tabs-btn="1">
+                                <span class="hardware__categories-btn-title">Упаковочное оборудование</span>
+                                <img src="./images/hardware/categories-03.png" class="hardware__categories-btn-img"
+                                    alt="">
+                            </button>
+                        </div>
+                        <div class="swiper-slide">
+                            <button type="button" class="hardware__categories-btn reset-btn" data-tabs-btn="2">
+                                <span class="hardware__categories-btn-title">Оборудование для пищевой и химической
+                                    отраслей</span>
+                                <img src="./images/hardware/categories-04.png" class="hardware__categories-btn-img"
+                                    alt="">
+                            </button>
+                        </div>
+                        <div class="swiper-slide">
+                            <button type="button" class="hardware__categories-btn reset-btn" data-tabs-btn="1">
+                                <span class="hardware__categories-btn-title">Запчасти, форматная оснастка,
+                                    пресс-инструмент</span>
+                                <img src="./images/hardware/categories-05.png" class="hardware__categories-btn-img"
+                                    alt="">
+                            </button>
+                        </div>
+                        <div class="swiper-slide">
+                            <button type="button" class="hardware__categories-btn reset-btn" data-tabs-btn="2">
+                                <span class="hardware__categories-btn-title">Оборудование в наличии</span>
+                                <img src="./images/hardware/categories-06.png" class="hardware__categories-btn-img"
+                                    alt="">
+                            </button>
+                        </div>
+                        <div class="swiper-slide">
+                            <button type="button" class="hardware__categories-btn reset-btn" data-tabs-btn="1">
+                                <span class="hardware__categories-btn-title">Оборудование бывшее в употреблении</span>
+                                <img src="./images/hardware/categories-07.png" class="hardware__categories-btn-img"
+                                    alt="">
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="hardware__sections">
+                    <div class="hardware__section is-active" data-tabs-section="1">
+                        <div class="hardware__block">
+                            <div class="hardware__block-row">
+                                <div class="hardware__block-head">
+                                    Для производства
+                                    твердых лекарственных
+                                    форм (ТЛФ)
+                                </div>
+                                <a href="#" class="hardware__block-item">
+                                    <div class="hardware__block-item-title">Таблеточные прессы</div>
+                                    <div class="hardware__block-item-icon slider-btn">
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                fill="#101618" />
+                                            <path
+                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                fill="#101618" />
+                                        </svg>
+                                    </div>
+                                    <picture class="hardware__block-item-img">
+                                        <img src="./images/hardware/img-01.png" alt="">
+                                    </picture>
+                                </a>
+                                <a href="#" class="hardware__block-item">
+                                    <div class="hardware__block-item-title">Машины наполнения капсул</div>
+                                    <div class="hardware__block-item-icon slider-btn">
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                fill="#101618" />
+                                            <path
+                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                fill="#101618" />
+                                        </svg>
+                                    </div>
+                                    <picture class="hardware__block-item-img">
+                                        <img src="./images/hardware/img-02.png" alt="">
+                                    </picture>
+                                </a>
+                                <a href="#" class="hardware__block-item">
+                                    <div class="hardware__block-item-title">Компакторы</div>
+                                    <div class="hardware__block-item-icon slider-btn">
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                fill="#101618" />
+                                            <path
+                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                fill="#101618" />
+                                        </svg>
+                                    </div>
+                                    <picture class="hardware__block-item-img">
+                                        <img src="./images/hardware/img-03.png" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="hardware__block-row">
+                                <div class="hardware__block-head">
+                                    Для производства
+                                    жидких лекарственных
+                                    форм (ЖЛФ)
+                                </div>
+                                <a href="#" class="hardware__block-item">
+                                    <div class="hardware__block-item-title">Розлив в ампулы</div>
+                                    <div class="hardware__block-item-icon slider-btn">
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                fill="#101618" />
+                                            <path
+                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                fill="#101618" />
+                                        </svg>
+                                    </div>
+                                    <picture class="hardware__block-item-img">
+                                        <img src="./images/hardware/img-04.png" alt="">
+                                    </picture>
+                                </a>
+                                <a href="#" class="hardware__block-item">
+                                    <div class="hardware__block-item-title">Розлив в шприцы</div>
+                                    <div class="hardware__block-item-icon slider-btn">
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                fill="#101618" />
+                                            <path
+                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                fill="#101618" />
+                                        </svg>
+                                    </div>
+                                    <picture class="hardware__block-item-img">
+                                        <img src="./images/hardware/img-05.png" alt="">
+                                    </picture>
+                                </a>
+                                <a href="#" class="hardware__block-item">
+                                    <div class="hardware__block-item-title">Розлив глазных капель</div>
+                                    <div class="hardware__block-item-icon slider-btn">
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                fill="#101618" />
+                                            <path
+                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                fill="#101618" />
+                                        </svg>
+                                    </div>
+                                    <picture class="hardware__block-item-img">
+                                        <img src="./images/hardware/img-06.png" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="hardware__block-row">
+                                <div class="hardware__block-head">
+                                    Для производства мазей, кремов и суппозиториев
+                                </div>
+                                <a href="#" class="hardware__block-item">
+                                    <div class="hardware__block-item-title">Таблеточные прессы</div>
+                                    <div class="hardware__block-item-icon slider-btn">
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                fill="#101618" />
+                                            <path
+                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                fill="#101618" />
+                                        </svg>
+                                    </div>
+                                    <picture class="hardware__block-item-img">
+                                        <img src="./images/hardware/img-07.png" alt="">
+                                    </picture>
+                                </a>
+                                <a href="#" class="hardware__block-item">
+                                    <div class="hardware__block-item-title">Таблеточные прессы</div>
+                                    <div class="hardware__block-item-icon slider-btn">
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                fill="#101618" />
+                                            <path
+                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                fill="#101618" />
+                                        </svg>
+                                    </div>
+                                    <picture class="hardware__block-item-img">
+                                        <img src="./images/hardware/img-08.png" alt="">
+                                    </picture>
+                                </a>
+                                <a href="#" class="hardware__block-item">
+                                    <div class="hardware__block-item-title">Таблеточные прессы</div>
+                                    <div class="hardware__block-item-icon slider-btn">
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                fill="#101618" />
+                                            <path
+                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                fill="#101618" />
+                                        </svg>
+                                    </div>
+                                    <picture class="hardware__block-item-img">
+                                        <img src="./images/hardware/img-09.png" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hardware__section" data-tabs-section="2">
+                        <div class="hardware__block">
+                            <div class="hardware__block-row">
+                                <div class="hardware__block-head">
+                                    Для производства мазей, кремов и суппозиториев
+                                </div>
+                                <a href="#" class="hardware__block-item">
+                                    <div class="hardware__block-item-title">Таблеточные прессы</div>
+                                    <div class="hardware__block-item-icon slider-btn">
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                fill="#101618" />
+                                            <path
+                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                fill="#101618" />
+                                        </svg>
+                                    </div>
+                                    <picture class="hardware__block-item-img">
+                                        <img src="./images/hardware/img-07.png" alt="">
+                                    </picture>
+                                </a>
+                                <a href="#" class="hardware__block-item">
+                                    <div class="hardware__block-item-title">Таблеточные прессы</div>
+                                    <div class="hardware__block-item-icon slider-btn">
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                fill="#101618" />
+                                            <path
+                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                fill="#101618" />
+                                        </svg>
+                                    </div>
+                                    <picture class="hardware__block-item-img">
+                                        <img src="./images/hardware/img-08.png" alt="">
+                                    </picture>
+                                </a>
+                                <a href="#" class="hardware__block-item">
+                                    <div class="hardware__block-item-title">Таблеточные прессы</div>
+                                    <div class="hardware__block-item-icon slider-btn">
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                fill="#101618" />
+                                            <path
+                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                fill="#101618" />
+                                        </svg>
+                                    </div>
+                                    <picture class="hardware__block-item-img">
+                                        <img src="./images/hardware/img-09.png" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hardware__spollers">
+                    <div class="hardware__spoller" data-spoller>
+                        <div class="hardware__spoller-head" data-spoller="head">
+                            <div class="hardware__spoller-icon">
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M28 14C28 21.7323 21.7323 28 14 28C6.26769 28 -1.90735e-06 21.7323 -1.90735e-06 14C-1.90735e-06 6.26769 6.26769 -1.90735e-06 14 -1.90735e-06C21.7323 -1.90735e-06 28 6.26769 28 14ZM1.07692 14C1.07692 21.126 6.874 26.9231 14 26.9231C21.126 26.9231 26.9231 21.126 26.9231 14C26.9231 6.874 21.126 1.07692 14 1.07692C6.874 1.07692 1.07692 6.874 1.07692 14Z"
+                                        fill="#101618" />
+                                    <path
+                                        d="M19.0042 16.5312L14.0009 11.5268L8.99747 16.5312L8.23501 15.7699L14.0009 10.004L19.7656 15.7699L19.0042 16.5312Z"
+                                        fill="#101618" />
+                                </svg>
+                            </div>
+                            <div class="hardware__spoller-title">Фармацевтическое оборудование</div>
+                        </div>
+                        <div class="hardware__spoller-body" data-spoller="body">
+                            <div class="hardware__spoller-links">
+                                <a href="#" class="hardware__spoller-link">
+                                    Для производства
+                                    твердых лекарственных
+                                    форм (ТЛФ)
+                                </a>
+                                <a href="#" class="hardware__spoller-link">
+                                    Для производства
+                                    жидких лекарственных
+                                    форм (ЖЛФ)
+                                </a>
+                                <a href="#" class="hardware__spoller-link">
+                                    Для производства мазей, кремов и суппозиториев
+                                </a>
+                            </div>
+                            <button class="hardware__spoller-btn btn btn--secondary btn--wide">Полный каталог</button>
+                        </div>
+                    </div>
+                    <div class="hardware__spoller" data-spoller>
+                        <div class="hardware__spoller-head" data-spoller="head">
+                            <div class="hardware__spoller-icon">
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M28 14C28 21.7323 21.7323 28 14 28C6.26769 28 -1.90735e-06 21.7323 -1.90735e-06 14C-1.90735e-06 6.26769 6.26769 -1.90735e-06 14 -1.90735e-06C21.7323 -1.90735e-06 28 6.26769 28 14ZM1.07692 14C1.07692 21.126 6.874 26.9231 14 26.9231C21.126 26.9231 26.9231 21.126 26.9231 14C26.9231 6.874 21.126 1.07692 14 1.07692C6.874 1.07692 1.07692 6.874 1.07692 14Z"
+                                        fill="#101618" />
+                                    <path
+                                        d="M19.0042 16.5312L14.0009 11.5268L8.99747 16.5312L8.23501 15.7699L14.0009 10.004L19.7656 15.7699L19.0042 16.5312Z"
+                                        fill="#101618" />
+                                </svg>
+                            </div>
+                            <div class="hardware__spoller-title">Оборудование для производства косметики</div>
+                        </div>
+                        <div class="hardware__spoller-body" data-spoller="body">
+                            <div class="hardware__spoller-links">
+                                <a href="#" class="hardware__spoller-link">
+                                    Для производства
+                                    твердых лекарственных
+                                    форм (ТЛФ)
+                                </a>
+                                <a href="#" class="hardware__spoller-link">
+                                    Для производства
+                                    жидких лекарственных
+                                    форм (ЖЛФ)
+                                </a>
+                                <a href="#" class="hardware__spoller-link">
+                                    Для производства мазей, кремов и суппозиториев
+                                </a>
+                            </div>
+                            <button class="hardware__spoller-btn btn btn--secondary btn--wide">Полный каталог</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hardware__bottom">
+                    <a href="#" class="hardware__btn btn btn--secondary">К полному списку оборудования</a>
+                </div>
+            </div>
+        </section>
+        <section class="partners">
+            <div class="container">
+                <h2 class="partners__title h2">Работаем с проверенными производителями оборудования из Азии и Европы
+                </h2>
+                <div class="partners__filters">
+                    <button type="button" class="partners__filters-btn reset-btn is-active"
+                        data-filter="all">Все</button>
+                    <button type="button" class="partners__filters-btn reset-btn" data-filter="asia">Азия</button>
+                    <button type="button" class="partners__filters-btn reset-btn" data-filter="europe">Европа</button>
+                    <button type="button" class="partners__filters-btn reset-btn" data-filter="usa">Америка</button>
+                </div>
+                <div class="partners__inner">
+                    <div class="partners__list">
+                        <div class="partners__item" data-id="1" data-country="asia">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-01.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="2" data-country="usa">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-02.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="3" data-country="europe">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-03.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="1" data-country="asia">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-04.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="2" data-country="usa">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-05.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="3" data-country="europe">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-06.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-country="asia">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-07.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="1" data-country="usa">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-08.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="1" data-country="europe">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-09.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="1" data-country="asia">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-10.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="1" data-country="usa">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-11.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="1" data-country="europe">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-12.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="1" data-country="asia">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-13.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="1" data-country="usa">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-14.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="1" data-country="europe">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-15.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="1" data-country="asia">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-16.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="1" data-country="usa">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-17.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="1" data-country="europe">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-18.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="1" data-country="asia">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-19.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="1" data-country="usa">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-20.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="1" data-country="europe">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-21.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="1" data-country="asia">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-22.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="1" data-country="usa">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-23.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="1" data-country="europe">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-24.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="1" data-country="asia">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-25.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="1" data-country="usa">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-26.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="1" data-country="europe">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-27.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="1" data-country="asia">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-28.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="1" data-country="asia">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-29.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="1" data-country="usa">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-30.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="1" data-country="europe">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-31.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="1" data-country="asia">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-32.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="1" data-country="asia">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-33.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="partners__item" data-id="1" data-country="usa">
+                            <picture class="partners__item-logo">
+                                <img src="./images/partners/logo-34.png" alt="">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="partners__popup">
+                        <button class="partners__popup-close"></button>
+                        <div class="partners__popup-top">
+                            <picture class="partners__popup-logo">
+                                <img src="./images/partners/logo-01.png" alt="">
+                            </picture>
+                            <div class="partners__popup-info">
+                                <div class="partners__popup-name">Sejong Pharmatech,</div>
+                                <div class="partners__popup-country">Южная Корея</div>
+                            </div>
+                        </div>
+                        <div class="partners__popup-desc">
+                            Производитель технологического оборудования для
+                            фармацевтического, пищевого и химического производства
+                        </div>
+                        <div class="partners__popup-labels">
+                            <a href="#" class="partners__popup-label">таблетпрессы </a>
+                            <a href="#" class="partners__popup-label">системы смешивания и грануляции</a>
+                            <a href="#" class="partners__popup-label">оборудование для нанесения покрытий</a>
+                            <a href="#" class="partners__popup-label">контроль веса таблеток и капсул</a>
+                            <a href="#" class="partners__popup-label">машины наполнения капсул</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="steps">
@@ -824,12 +1554,15 @@
                         </div>
                         <div class="footer__nav-col">
                             <a href="#" class="footer__nav-head hover-default">оборудование</a>
-                            <a href="#" class="footer__nav-link hover-default">Оборудование для фармацевтического производства</a>
-                            <a href="#" class="footer__nav-link hover-default">Оборудование для косметического производства</a>
+                            <a href="#" class="footer__nav-link hover-default">Оборудование для фармацевтического
+                                производства</a>
+                            <a href="#" class="footer__nav-link hover-default">Оборудование для косметического
+                                производства</a>
                             <a href="#" class="footer__nav-link hover-default">Упаковочное оборудование</a>
                             <a href="#" class="footer__nav-link hover-default">Оборудование для пищевого и химического
                                 производства</a>
-                            <a href="#" class="footer__nav-link hover-default">Запчасти, форматная оснастка, пресс-инструмент</a>
+                            <a href="#" class="footer__nav-link hover-default">Запчасти, форматная оснастка,
+                                пресс-инструмент</a>
                             <a href="#" class="footer__nav-link hover-default">Оборудование в наличии </a>
                             <a href="#" class="footer__nav-link hover-default">Оборудование бывшее в употреблении</a>
                         </div>

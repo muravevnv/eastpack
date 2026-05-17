@@ -6,6 +6,10 @@
         align-items: stretch;
         border-left: 1px solid var(--color-black);
         border-right: 1px solid var(--color-black);
+
+        @media screen and (max-width: 767.98px) {
+            border: none;
+        }
     }
 
     &__main {
@@ -21,7 +25,22 @@
         }
 
         @media screen and (max-width: 767.98px) {
-            padding: 12px 20px;
+            border-right: 0;
+            padding: 10px 0;
+            justify-content: space-between;
+        }
+    }
+
+    &__burger {
+        display: none;
+
+        @media screen and (max-width: 767.98px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--color-primary);
         }
     }
 
@@ -67,6 +86,10 @@
         border-right: 1px solid var(--color-black);
         cursor: pointer;
 
+        @media screen and (max-width: 767.98px) {
+            display: none;
+        }
+
         &-btn {
             width: 20px;
             height: 20px;
@@ -86,6 +109,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @media screen and (max-width: 767.98px) {
+            display: none;
+        }
 
         &-change {
             font-size: 12px;
