@@ -323,4 +323,56 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     initSpollers();
+
+    function initMenu() {
+        const menu = document.querySelector('.js-menu');
+        const burger = document.querySelector('.js-header-burger');
+        const sectionControls = document.querySelectorAll('[data-section-control]');
+        const sectionBackButtons = document.querySelectorAll('[data-section-back]');
+        const menuSections = document.querySelectorAll('.menu__section');
+
+        if (burger && menu) {
+            burger.addEventListener('click', () => {
+                if(menu.classList.contains('is-open')) {
+                    burger.classList.remove('is-active');
+                    menu.classList.remove('is-open');
+                    document.body.style.overflow = '';
+                    menuSections.forEach(section => section.classList.remove('is-active'));
+                } else {
+                    burger.classList.add('is-active');
+                    menu.classList.add('is-open');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+
+            sectionControls.forEach(control => {
+                control.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetSection = control.getAttribute('data-section-control');
+                    const allSections = menu.querySelectorAll('.menu__section');
+                    allSections.forEach(section => {
+                        if (section.getAttribute('data-section') === targetSection) {
+                            section.classList.add('is-active');
+                        } else {
+                            section.classList.remove('is-active');
+                        }
+                    });
+                });
+            });
+            
+            sectionBackButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetSection = button.getAttribute('data-section-back');
+                    const section = menu.querySelector(`.menu__section[data-section="${targetSection}"]`);
+                    console.log(targetSection, section);
+                    if (section) {
+                        section.classList.remove('is-active');
+                    }
+                });
+            });
+        }
+    }
+
+    initMenu();
 })

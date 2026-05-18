@@ -7,7 +7,7 @@
         border-left: 1px solid var(--color-black);
         border-right: 1px solid var(--color-black);
 
-        @media screen and (max-width: 767.98px) {
+        @media screen and (max-width: 1023.98px) {
             border: none;
         }
     }
@@ -24,7 +24,7 @@
             padding: 24px 20px;
         }
 
-        @media screen and (max-width: 767.98px) {
+        @media screen and (max-width: 1023.98px) {
             border-right: 0;
             padding: 10px 0;
             justify-content: space-between;
@@ -34,13 +34,56 @@
     &__burger {
         display: none;
 
-        @media screen and (max-width: 767.98px) {
+        @media screen and (max-width: 1023.98px) {
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
             width: 40px;
             height: 40px;
             background-color: var(--color-primary);
+
+            span {
+                position: absolute;
+                width: 18px;
+                height: 2px;
+                background-color: var(--color-dark);
+
+                &:nth-of-type(1) {
+                    left: 11px;
+                    top: 14px;
+                }
+
+                &:nth-of-type(2) {
+                    left: 11px;
+                    top: 20px;
+                }
+
+                &:nth-of-type(3) {
+                    left: 11px;
+                    top: 26px;
+                }
+            }
+
+            &.is-active {
+
+                span {
+
+                    &:nth-of-type(1) {
+                        transform: rotate(45deg);
+                        top: 19px;
+                    }
+
+                    &:nth-of-type(2) {
+                        opacity: 0;
+                    }
+
+                    &:nth-of-type(3) {
+                        transform: rotate(-45deg);
+                        top: 19px;
+                    }
+                }
+            }
         }
     }
 
@@ -57,10 +100,6 @@
         border-right: 1px solid var(--color-black);
 
         @media screen and (max-width: 1279.98px) {
-            padding: 20px;
-        }
-
-        @media screen and (max-width: 767.98px) {
             display: none;
         }
 
@@ -86,7 +125,7 @@
         border-right: 1px solid var(--color-black);
         cursor: pointer;
 
-        @media screen and (max-width: 767.98px) {
+        @media screen and (max-width: 1023.98px) {
             display: none;
         }
 
@@ -110,7 +149,7 @@
         align-items: center;
         justify-content: center;
 
-        @media screen and (max-width: 767.98px) {
+        @media screen and (max-width: 1023.98px) {
             display: none;
         }
 
@@ -132,7 +171,7 @@
 
     &__nav {
 
-        @media screen and (max-width: 1279.98px) {
+        @media screen and (max-width: 1023.98px) {
             display: none;
         }
 

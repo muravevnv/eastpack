@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="./css/libs/swiper-bundle.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Eastpack</title>
@@ -16,7 +15,11 @@
             <div class="header__inner">
                 <div class="header__main">
                     <a href="#" class="header__logo">
-                        <img src="./images/logo-icon.png" alt="">
+                        <picture class="header__logo-img">
+                            <source srcset="./images/logo.png" media="(max-width: 1023.98px)">
+                            <img src="./images/logo-icon.png" alt="">
+                        </picture>
+
                     </a>
                     <nav class="header__nav">
                         <ul class="header__nav-list">
@@ -41,12 +44,10 @@
                         </ul>
                     </nav>
 
-                    <button class="header__burger reset-btn">
-                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <line y1="1" x2="18" y2="1" stroke="black" stroke-width="2" />
-                            <line y1="7" x2="18" y2="7" stroke="black" stroke-width="2" />
-                            <line y1="13" x2="18" y2="13" stroke="black" stroke-width="2" />
-                        </svg>
+                    <button class="header__burger reset-btn js-header-burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </button>
                 </div>
 
@@ -72,6 +73,71 @@
             </div>
         </div>
     </header>
+    <div class="menu js-menu">
+        <div class="menu__inner">
+            <div class="menu__nav">
+                <a href="#" class="menu__nav-link">главная</a>
+                <a href="#" class="menu__nav-link" data-section-control="base">оборудование</a>
+                <a href="#" class="menu__nav-link">Запчасти и Сервис</a>
+                <a href="#" class="menu__nav-link" data-section-control="base">о компании</a>
+                <a href="#" class="menu__nav-link">Проекты</a>
+                <a href="#" class="menu__nav-link">контакты</a>
+            </div>
+            <div class="menu__section" data-section="base">
+                <div class="menu__section-top">
+                    <button type="button" class="menu__section-back reset-btn" data-section-back="base">НАЗАД</button>
+                    <a href="#" class="menu__section-to-catalog">В КАТАЛОГ</a>
+                </div>
+                <div class="menu__section-nav">
+                    <a href="#" class="menu__section-item" data-section-control="pharma">Оборудование для
+                        фармацевтического производства</a>
+                    <a href="#" class="menu__section-item" data-section-control="pharma">Оборудование для косметического
+                        производства</a>
+                    <a href="#" class="menu__section-item" data-section-control="pharma">Упаковочное оборудование</a>
+                    <a href="#" class="menu__section-item" data-section-control="pharma">Оборудование для пищевого и
+                        химического производства</a>
+                    <a href="#" class="menu__section-item" data-section-control="pharma">Запчасти, форматная оснастка,
+                        пресс-инструмент</a>
+                    <a href="#" class="menu__section-item" data-section-control="pharma">Оборудование в наличии </a>
+                    <a href="#" class="menu__section-item" data-section-control="pharma">Оборудование бывшее в
+                        употреблении</a>
+                </div>
+            </div>
+            <div class="menu__section" data-section="pharma">
+                <div class="menu__section-top">
+                    <button type="button" class="menu__section-back reset-btn"
+                        data-section-control="base">НАЗАД</button>
+                    <a href="#" class="menu__section-to-catalog">В КАТАЛОГ</a>
+                </div>
+                <div class="menu__section-head">
+                    Оборудование для фармацевтического производства
+                </div>
+                <div class="menu__section-nav">
+                    <a href="#" class="menu__section-item" data-section-control="solid-pharma">Твердые лекарственные
+                        формы</a>
+                    <a href="#" class="menu__section-item" data-section-control="solid-pharma">Жидкие лекарственные
+                        формы</a>
+                    <a href="#" class="menu__section-item" data-section-control="solid-pharma">Мази, суппозитории,
+                        крема</a>
+                </div>
+            </div>
+            <div class="menu__section" data-section="solid-pharma">
+                <div class="menu__section-top">
+                    <button type="button" class="menu__section-back reset-btn"
+                        data-section-control="pharma">НАЗАД</button>
+                    <a href="#" class="menu__section-to-catalog">В КАТАЛОГ</a>
+                </div>
+                <div class="menu__section-head">
+                    Твердые лекарственные формы
+                </div>
+                <div class="menu__section-links">
+                    <a href="#" class="menu__section-link">Таблеточные прессы</a>
+                    <a href="#" class="menu__section-link">Машины наполнения капсул</a>
+                    <a href="#" class="menu__section-link">Линии грануляции</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <main>
         <section class="hero">
             <div class="container container--expand-right">

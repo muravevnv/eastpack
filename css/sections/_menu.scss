@@ -1,0 +1,127 @@
+.menu {
+    display: none;
+
+    @media screen and (max-width: 1023.98px) {
+        width: 100%;
+        height: calc(100dvh - 61px);
+        background-color: var(--color-white);
+        position: fixed;
+        inset: 61px 0 0 0;
+        z-index: 99;
+        overflow: hidden;
+
+        &.is-open {
+            display: block;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-height: 100%;
+        overflow-y: auto;
+
+        &-link {
+            width: 100%;
+            padding: 30px 24px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            line-height: 1.2;
+            font-weight: 500;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--color-dark);
+
+            &::before {
+                content: '';
+                width: 32px;
+                height: 32px;
+                background: url('../../images/icons/slider-chevron-right.svg') center center / 20px no-repeat,
+                    var(--color-primary);
+            }
+        }
+    }
+
+    &__section {
+        position: absolute;
+        width: 100%;
+        inset: 0 0 auto 0;
+        height: calc(100dvh - 61px);
+        overflow-y: auto;
+        background-color: var(--color-white);
+        display: none;
+        z-index: 100;
+
+        &.is-active {
+            display: block;
+        }
+
+        &-top {
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--color-dark);
+        }
+
+        &-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            line-height: 1.2;
+            text-transform: uppercase;
+
+            &::before {
+                content: '';
+                width: 32px;
+                height: 32px;
+                background: url('../../images/icons/slider-chevron-left.svg') center center / 20px no-repeat,
+                    var(--color-grey-150);
+            }
+        }
+
+        &-to-catalog {
+            font-size: 14px;
+            line-height: 1.2;
+            font-weight: 500;
+            color: var(--color-secondary);
+        }
+
+        &-head {
+            padding: 24px;
+            font-size: 16px;
+            line-height: 1.25;
+            font-weight: 500;
+            border-bottom: 1px solid var(--color-dark);
+        }
+
+        &-link {
+            display: block;
+            width: 100%;
+            padding: 10px 24px;
+            border-bottom: 1px solid var(--color-dark);
+        }
+
+        &-item {
+            width: 100%;
+            padding: 24px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            line-height: 1.2;
+            border-bottom: 1px solid var(--color-dark);
+
+            &::before {
+                content: '';
+                width: 32px;
+                height: 32px;
+                background: url('../../images/icons/slider-chevron-right.svg') center center / 20px no-repeat,
+                    var(--color-primary);
+            }
+        }
+    }
+}
