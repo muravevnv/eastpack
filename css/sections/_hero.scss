@@ -19,6 +19,15 @@
         @media screen and (max-width: 767.98px) {
             font-size: 24px;
         }
+
+        span {
+            color: var(--color-grey);
+            cursor: pointer;
+
+            &.is-active {
+                color: var(--color-black);
+            }
+        }
     }
 
     &__inner {

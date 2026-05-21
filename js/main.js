@@ -9,6 +9,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 nextEl: '.js-hero-slider-next'
             }
         })
+
+        const slideTitles = document.querySelectorAll('[data-slide-title]');
+
+        if (slideTitles.length > 0) {
+            slideTitles.forEach(slideTitle => {
+                slideTitle.addEventListener('click', () => {
+                    slideTitles.forEach(slideTitle => slideTitle.classList.remove('is-active'));
+                    slideTitle.classList.add('is-active');
+                    stepsSlider.slideTo(parseInt(slideTitle.getAttribute('data-slide-title')));
+                })
+            });
+        }
     }
 
     if (document.querySelector('.js-steps-slider')) {
@@ -122,6 +134,113 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
     }
+
+    function initHeaderSearch() {
+        const headerSearch = document.querySelector('.js-header-search');
+        const headerSearchBtn = document.querySelector('.js-header-search-btn');
+        const headerSearchForm = document.querySelector('.js-header-search-form');
+        const headerContacts = document.querySelector('.js-header-contacts');
+
+        headerSearchBtn.addEventListener('click', () => {
+            headerSearch.classList.add('is-active');
+            headerContacts.classList.add('is-hidden');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!headerSearch.contains(e.target) && !e.target.closest('.js-header-search-btn')) {
+                headerSearch.classList.remove('is-active');
+                headerContacts.classList.remove('is-hidden');
+                headerSearchForm.reset();
+            }
+        });
+    }
+
+    initHeaderSearch();
+
+    function initHeaderFixed() {
+        const header = document.querySelector('.header');
+
+        document.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                header.classList.add('is-fixed');
+            } else {
+                header.classList.remove('is-fixed');
+            }
+        })
+    }
+
+    initHeaderFixed();
+
+    function iniInnerMenu() {
+        // Вспомогательная функция для переключения активных классов
+        const toggleActiveLevel = (items, targetSelector, activeAttr, activeValue) => {
+            items.forEach(item => item.classList.remove('is-active'));
+
+            const targetEl = document.querySelector(`${targetSelector}[${activeAttr}="${activeValue}"]`);
+            if (targetEl) {
+                targetEl.classList.add('is-active');
+            }
+        };
+
+        // Собираем все группы элементов
+        const innerMenuBtns = document.querySelectorAll('.js-menu-inner-btn');
+        const innerMenus = document.querySelectorAll('.js-menu-inner');
+        const innerMenuClose = document.querySelectorAll('.js-menu-inner-close');
+
+        const menuInnerItems = document.querySelectorAll('.js-menu-inner-item');
+        const menuInnerSections = document.querySelectorAll('.js-menu-inner-section');
+
+        const menuInnerSubmenusItems = document.querySelectorAll('.js-menu-inner-submenu-item');
+        const menuInnerBlocks = document.querySelectorAll('.js-menu-inner-block');
+
+        // Функция полного сброса всех уровней меню
+        const resetAllMenus = () => {
+            const allElements = [
+                ...innerMenus,
+                ...innerMenuBtns,
+                ...menuInnerItems,
+                ...menuInnerSections,
+                ...menuInnerSubmenusItems,
+                ...menuInnerBlocks
+            ];
+            allElements.forEach(el => el.classList.remove('is-active'));
+        };
+
+        // 1. Главные кнопки меню
+        innerMenuBtns.forEach(btn => {
+            btn.addEventListener('mouseenter', () => {
+                const target = btn.getAttribute('data-menu-inner-btn');
+                toggleActiveLevel(innerMenus, '.js-menu-inner', 'data-menu-inner', target);
+                innerMenuBtns.forEach(b => b.classList.toggle('is-active', b === btn));
+            });
+        });
+
+        // Кнопка закрытия (теперь с полным сбросом)
+        innerMenuClose.forEach(btn => {
+            btn.addEventListener('click', resetAllMenus);
+        });
+
+        // 2. Вложенные пункты (Items -> Sections)
+        menuInnerItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                const target = item.getAttribute('data-inner-item');
+                toggleActiveLevel(menuInnerSections, '.js-menu-inner-section', 'data-inner-section', target);
+                menuInnerItems.forEach(i => i.classList.toggle('is-active', i === item));
+            });
+        });
+
+        // 3. Подменю глубокого уровня (Submenus -> Blocks)
+        menuInnerSubmenusItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                const target = item.getAttribute('data-inner-submenu-item');
+                toggleActiveLevel(menuInnerBlocks, '.js-menu-inner-block', 'data-inner-submenu-block', target);
+                menuInnerSubmenusItems.forEach(i => i.classList.toggle('is-active', i === item));
+            });
+        });
+    }
+
+    // Инициализация
+    iniInnerMenu();
 
     const partnersData = {
         "1": {
@@ -333,7 +452,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (burger && menu) {
             burger.addEventListener('click', () => {
-                if(menu.classList.contains('is-open')) {
+                if (menu.classList.contains('is-open')) {
                     burger.classList.remove('is-active');
                     menu.classList.remove('is-open');
                     document.body.style.overflow = '';
@@ -359,7 +478,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                 });
             });
-            
+
             sectionBackButtons.forEach(button => {
                 button.addEventListener('click', (e) => {
                     e.preventDefault();

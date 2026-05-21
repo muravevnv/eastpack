@@ -1,5 +1,28 @@
 .header {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-white);
     border-bottom: 1px solid var(--color-black);
+    z-index: 99;
+    min-height: 80px;
+
+    @media screen and (max-width: 1199.98px) {
+        min-height: unset;
+    }
+
+    &.is-fixed {
+
+        .header__logo {
+
+            &-icon {
+                display: none;
+            }
+
+            &-img {
+                display: flex;
+            }
+        }
+    }
 
     &__inner {
         display: flex;
@@ -7,7 +30,7 @@
         border-left: 1px solid var(--color-black);
         border-right: 1px solid var(--color-black);
 
-        @media screen and (max-width: 1023.98px) {
+        @media screen and (max-width: 1199.98px) {
             border: none;
         }
     }
@@ -17,14 +40,14 @@
         align-items: center;
         gap: 40px;
         flex-grow: 1;
-        padding: 24px;
+        padding: 22px 24px;
         border-right: 1px solid var(--color-black);
 
         @media screen and (max-width: 1279.98px) {
-            padding: 24px 20px;
+            padding: 22px 20px;
         }
 
-        @media screen and (max-width: 1023.98px) {
+        @media screen and (max-width: 1199.98px) {
             border-right: 0;
             padding: 10px 0;
             justify-content: space-between;
@@ -34,7 +57,7 @@
     &__burger {
         display: none;
 
-        @media screen and (max-width: 1023.98px) {
+        @media screen and (max-width: 1199.98px) {
             position: relative;
             display: flex;
             align-items: center;
@@ -89,15 +112,47 @@
 
     &__logo {
         display: block;
+
+        &-icon {
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+        }
+
+        &-img {
+            width: 104px;
+            height: 35px;
+            display: none;
+
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+        }
     }
 
     &__contacts {
+        width: 200px;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 8px;
         padding: 20px 40px;
         border-right: 1px solid var(--color-black);
+
+        &.is-hidden {
+            display: none;
+        }
 
         @media screen and (max-width: 1279.98px) {
             display: none;
@@ -125,7 +180,49 @@
         border-right: 1px solid var(--color-black);
         cursor: pointer;
 
-        @media screen and (max-width: 1023.98px) {
+        &.is-active {
+            width: 240px;
+
+            .header__search-form {
+                display: block;
+            }
+
+            .header__search-btn {
+                display: none;
+            }
+        }
+
+        &-form {
+
+            width: 100%;
+            padding: 0 15px;
+            display: none;
+        }
+
+        &-input {
+            width: 100%;
+            padding: 8px 24px 8px 0;
+            font-family: var(--font-primary);
+            font-weight: 400;
+            color: var(--color-dark);
+            font-size: 14px;
+            line-height: 1.25;
+            border: none;
+            border-radius: 0;
+            background: url('../../images/icons/search.svg') center right/ 19px no-repeat, transparent;
+            outline: none;
+            border-bottom: 1px solid var(--color-dark);
+
+            &::placeholder {
+                color: var(--color-dark);
+            }
+
+            &:focus::placeholder {
+                opacity: 0;
+            }
+        }
+
+        @media screen and (max-width: 1199.98px) {
             display: none;
         }
 
@@ -149,7 +246,7 @@
         align-items: center;
         justify-content: center;
 
-        @media screen and (max-width: 1023.98px) {
+        @media screen and (max-width: 1199.98px) {
             display: none;
         }
 
@@ -171,14 +268,17 @@
 
     &__nav {
 
-        @media screen and (max-width: 1023.98px) {
+        flex-grow: 1;
+
+        @media screen and (max-width: 1199.98px) {
             display: none;
         }
 
         &-list {
             display: flex;
             align-items: center;
-            gap: 46px;
+            justify-content: space-between;
+            gap: 32px;
             list-style: none;
             margin: 0;
             padding: 0;
@@ -188,6 +288,26 @@
             list-style: none;
             margin: 0;
             padding: 0;
+
+            &--dropdown {
+
+                .header__nav-link {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 12px;
+                        height: 6px;
+                        mask: url('../../images/icons/chevron-down.svg') center center / 12px no-repeat;
+                        -webkit-mask: url('../../images/icons/chevron-down.svg') center center / 12px no-repeat;
+                        background-color: currentColor;
+
+                    }
+                }
+            }
         }
 
         &-link {

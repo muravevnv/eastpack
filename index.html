@@ -15,24 +15,27 @@
             <div class="header__inner">
                 <div class="header__main">
                     <a href="#" class="header__logo">
-                        <picture class="header__logo-img">
-                            <source srcset="./images/logo.png" media="(max-width: 1023.98px)">
+                        <picture class="header__logo-icon">
                             <img src="./images/logo-icon.png" alt="">
                         </picture>
-
+                        <picture class="header__logo-img">
+                            <img src="./images/logo.png" alt="">
+                        </picture>
                     </a>
                     <nav class="header__nav">
                         <ul class="header__nav-list">
                             <li class="header__nav-item">
                                 <a href="#" class="header__nav-link hover-default">главная</a>
                             </li>
-                            <li class="header__nav-item">
+                            <li class="header__nav-item header__nav-item--dropdown js-menu-inner-btn"
+                                data-menu-inner-btn="catalog">
                                 <a href="#" class="header__nav-link hover-default">оборудование</a>
                             </li>
                             <li class="header__nav-item">
                                 <a href="#" class="header__nav-link hover-default">Запчасти и Сервис</a>
                             </li>
-                            <li class="header__nav-item">
+                            <li class="header__nav-item header__nav-item--dropdown js-menu-inner-btn"
+                                data-menu-inner-btn="about">
                                 <a href="#" class="header__nav-link hover-default">о компании</a>
                             </li>
                             <li class="header__nav-item">
@@ -51,12 +54,15 @@
                     </button>
                 </div>
 
-                <div class="header__contacts">
+                <div class="header__contacts js-header-contacts">
                     <a href="tel:+74993906258" class="header__contacts-link">+7 (499) 390-62-58</a>
                     <a href="mailto:sales@eapack.ru" class="header__contacts-link">sales@eapack.ru</a>
                 </div>
-                <div class="header__search">
-                    <button type="button" class="header__search-btn reset-btn">
+                <div class="header__search js-header-search">
+                    <form action="#" class="header__search-form js-header-search-form">
+                        <input type="text" class="header__search-input" placeholder="Поиск">
+                    </form>
+                    <button type="button" class="header__search-btn reset-btn js-header-search-btn">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M6.83333 13.1667C10.3311 13.1667 13.1667 10.3311 13.1667 6.83333C13.1667 3.33553 10.3311 0.5 6.83333 0.5C3.33553 0.5 0.5 3.33553 0.5 6.83333C0.5 10.3311 3.33553 13.1667 6.83333 13.1667Z"
@@ -73,6 +79,348 @@
             </div>
         </div>
     </header>
+    <div class="menu-inner js-menu-inner" data-menu-inner="catalog">
+        <div class="menu-inner__overlay js-menu-inner-close"></div>
+        <div class="container">
+            <div class="menu-inner__content">
+                <button type="button" class="menu-inner__close reset-btn js-menu-inner-close"></button>
+                <div class="menu-inner__main">
+                    <div class="menu-inner__items">
+                        <a href="#" class="menu-inner__item js-menu-inner-item" data-inner-item="1">
+                            Оборудование для фармацевтического производства
+                        </a>
+                        <a href="#" class="menu-inner__item js-menu-inner-item" data-inner-item="2">
+                            Оборудование для косметического производства
+                        </a>
+                        <a href="#" class="menu-inner__item js-menu-inner-item" data-inner-item="3">
+                            Упаковочное оборудование
+                        </a>
+                        <a href="#" class="menu-inner__item js-menu-inner-item" data-inner-item="4">
+                            Оборудование для пищевого и химического производства
+                        </a>
+                        <a href="#" class="menu-inner__item js-menu-inner-item" data-inner-item="5">
+                            Запчасти, форматная оснастка,
+                            пресс-инструмент
+                        </a>
+                        <a href="#" class="menu-inner__item js-menu-inner-item" data-inner-item="6">
+                            Оборудование в наличии
+                        </a>
+                        <a href="#" class="menu-inner__item js-menu-inner-item" data-inner-item="7">
+                            Оборудование бывшее в употреблении
+                        </a>
+                    </div>
+                </div>
+                <div class="menu-inner__sections">
+                    <div class="menu-inner__section js-menu-inner-section" data-inner-section="1">
+                        <div class="menu-inner__submenu">
+                            <a href="#" class="menu-inner__submenu-item js-menu-inner-submenu-item"
+                                data-inner-submenu-item="1-1">Твердые
+                                лекарственные
+                                формы
+                            </a>
+                            <a href="#" class="menu-inner__submenu-item js-menu-inner-submenu-item"
+                                data-inner-submenu-item="1-2">Жидкиелекарственные
+                                формы
+                            </a>
+                            <a href="#" class="menu-inner__submenu-item js-menu-inner-submenu-item"
+                                data-inner-submenu-item="1-3">Мази, суппозитории,
+                                крема
+                            </a>
+                        </div>
+                        <div class="menu-inner__block js-menu-inner-block" data-inner-submenu-block="1-1">
+                            <picture class="menu-inner__block-bottom-img">
+                                <img src="./images/menu/menu-block-1-1.png" alt="">
+                            </picture>
+                            <div class="menu-inner__block-links">
+                                <div class="menu-inner__block-links-col">
+                                    <div class="menu-inner__block-links-list">
+                                        <a href="#" class="menu-inner__block-link">Таблеточные прессы</a>
+                                        <a href="#" class="menu-inner__block-link">Машины наполнения капсул</a>
+                                        <a href="#" class="menu-inner__block-link">Линии грануляции</a>
+                                        <a href="#" class="menu-inner__block-link">Влажная грануляция</a>
+                                        <a href="#" class="menu-inner__block-link">Компакторы</a>
+                                        <a href="#" class="menu-inner__block-link">Мельницы и калибраторы</a>
+                                        <a href="#" class="menu-inner__block-link">Смесители и подъемные колонны</a>
+                                        <a href="#" class="menu-inner__block-link">Вакуумные загрузчики</a>
+                                        <a href="#" class="menu-inner__block-link">Вибросита</a>
+                                    </div>
+                                </div>
+                                <div class="menu-inner__block-links-col">
+                                    <div class="menu-inner__block-links-list">
+                                        <a href="#" class="menu-inner__block-link">Таблеточные прессы</a>
+                                        <a href="#" class="menu-inner__block-link">Проверка веса капсул (чеквейеры)</a>
+                                        <a href="#" class="menu-inner__block-link">Коатеры</a>
+                                        <a href="#" class="menu-inner__block-link">Обеспыливатели и полировщики</a>
+                                        <a href="#" class="menu-inner__block-link">Оборудование для производства МЖК</a>
+                                        <a href="#" class="menu-inner__block-link">Оборудование для разработки и
+                                            исследований (R&D)</a>
+                                        <a href="#" class="menu-inner__block-link">Другое оборудование для ТЛФ</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-inner__block js-menu-inner-block" data-inner-submenu-block="1-2">
+                            <picture class="menu-inner__block-bottom-img">
+                                <img src="./images/menu/menu-block-1-2.png" alt="">
+                            </picture>
+                            <div class="menu-inner__block-links">
+                                <div class="menu-inner__block-links-col">
+                                    <div class="menu-inner__block-links-head">
+                                        Стерильный (асептический) розлив
+                                    </div>
+                                    <div class="menu-inner__block-links-list">
+                                        <a href="#" class="menu-inner__block-link">Таблеточные прессы</a>
+                                        <a href="#" class="menu-inner__block-link">Машины наполнения капсул</a>
+                                        <a href="#" class="menu-inner__block-link">Линии грануляции</a>
+                                        <a href="#" class="menu-inner__block-link">Влажная грануляция</a>
+                                        <a href="#" class="menu-inner__block-link">Компакторы</a>
+                                        <a href="#" class="menu-inner__block-link">Мельницы и калибраторы</a>
+                                        <a href="#" class="menu-inner__block-link">Смесители и подъемные колонны</a>
+                                        <a href="#" class="menu-inner__block-link">Вакуумные загрузчики</a>
+                                        <a href="#" class="menu-inner__block-link">Вибросита</a>
+                                    </div>
+
+                                </div>
+                                <div class="menu-inner__block-links-col">
+                                    <div class="menu-inner__block-links-head">
+                                        Нестерильный розлив
+                                    </div>
+                                    <div class="menu-inner__block-links-list">
+                                        <a href="#" class="menu-inner__block-link">Розлив сиропов и суспензий</a>
+                                        <a href="#" class="menu-inner__block-link">Розлив во флаконы и бутылки</a>
+                                        <a href="#" class="menu-inner__block-link">Другое оборудование для ЖЛФ</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-inner__block js-menu-inner-block" data-inner-submenu-block="1-3">
+                            <picture class="menu-inner__block-bottom-img">
+                                <img src="./images/menu/menu-block-1-3.png" alt="">
+                            </picture>
+                            <div class="menu-inner__block-links">
+                                <div class="menu-inner__block-links-col">
+                                    <div class="menu-inner__block-links-list">
+                                        <a href="#" class="menu-inner__block-link">Гомогенизаторы и коллоидные
+                                            мельницы</a>
+                                        <a href="#" class="menu-inner__block-link">Тубонаполнительные машины</a>
+                                        <a href="#" class="menu-inner__block-link">Машины для производства
+                                            суппозиториев</a>
+                                        <a href="#" class="menu-inner__block-link">Машины фасовки кремов и мазей в
+                                            банку</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-inner__section js-menu-inner-section" data-inner-section="2">
+                        <div class="menu-inner__submenu">
+                            <a href="#" class="menu-inner__submenu-item js-menu-inner-submenu-item"
+                                data-inner-submenu-item="2-1">
+                                Производство декоративной косметики
+                            </a>
+                            <a href="#" class="menu-inner__submenu-item js-menu-inner-submenu-item"
+                                data-inner-submenu-item="2-2">Производство уходовой косметики
+                            </a>
+                            <a href="#" class="menu-inner__submenu-item js-menu-inner-submenu-item"
+                                data-inner-submenu-item="2-3">Производство гиалуроновой кислоты и медицинских изделий
+                            </a>
+                            <a href="#" class="menu-inner__submenu-item js-menu-inner-submenu-item"
+                                data-inner-submenu-item="2-4">Прочее оборудование для производства косметики
+                            </a>
+                        </div>
+                        <div class="menu-inner__block js-menu-inner-block" data-inner-submenu-block="2-1">
+                            <picture class="menu-inner__block-bottom-img">
+                                <img src="./images/menu/menu-block-2-1.png" alt="">
+                            </picture>
+                            <div class="menu-inner__block-links">
+                                <div class="menu-inner__block-links-col">
+                                    <div class="menu-inner__block-links-list">
+                                        <a href="#" class="menu-inner__block-link">Машины наполнения туб</a>
+                                        <a href="#" class="menu-inner__block-link">Пресса для пудры</a>
+                                        <a href="#" class="menu-inner__block-link">Машины наполнения туши</a>
+                                        <a href="#" class="menu-inner__block-link">Машины производства помады</a>
+                                        <a href="#" class="menu-inner__block-link">Прочее оборудование для производства
+                                            косметики</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-inner__block js-menu-inner-block" data-inner-submenu-block="2-2">
+                            <picture class="menu-inner__block-bottom-img">
+                                <img src="./images/menu/menu-block-2-2.png" alt="">
+                            </picture>
+                            <div class="menu-inner__block-desc">
+                                Мы поставляем оборудование для производства уходовой косметики: машины розлива кремов,
+                                шампуней, гелей для душа, тубонаполнительные линии и смесители. Подберем решение под ваш
+                                продукт и формат упаковки.
+                            </div>
+                            <a href="#" class="menu-inner__block-btn btn btn--secondary">В каталог</a>
+                        </div>
+                        <div class="menu-inner__block js-menu-inner-block" data-inner-submenu-block="2-3">
+                            <picture class="menu-inner__block-bottom-img">
+                                <img src="./images/menu/menu-block-2-3.png" alt="">
+                            </picture>
+                            <div class="menu-inner__block-desc">
+                                Поставляем оборудование для производства медицинских изделий и косметики премиум-класса:
+                                автоматические линии наполнения преднаполненных шприцев для гиалуроновой кислоты.
+                            </div>
+                            <a href="#" class="menu-inner__block-btn btn btn--secondary">В каталог</a>
+                        </div>
+                        <div class="menu-inner__block js-menu-inner-block" data-inner-submenu-block="2-4">
+                            <picture class="menu-inner__block-bottom-img">
+                                <img src="./images/menu/menu-block-2-4.png" alt="">
+                            </picture>
+                            <a href="#" class="menu-inner__block-btn btn btn--secondary">В каталог</a>
+                        </div>
+                    </div>
+                    <div class="menu-inner__section js-menu-inner-section" data-inner-section="3">
+
+                        <div class="menu-inner__section-inner">
+                            <picture class="menu-inner__section-bottom-img">
+                                <img src="./images/menu/menu-block-3.png" alt="">
+                            </picture>
+                            <div class="menu-inner__section-main">
+                                <div class="menu-inner__section-links">
+                                    <a href="#" class="menu-inner__section-link">Блистерные машины и термоформеры</a>
+                                    <a href="#" class="menu-inner__section-link">Картонажные машины</a>
+                                    <a href="#" class="menu-inner__section-link">Линии фасовки в саше и стики</a>
+                                    <a href="#" class="menu-inner__section-link">Линии фасовки таблеток в банку</a>
+                                    <a href="#" class="menu-inner__section-link">Этикетировщики</a>
+                                    <a href="#" class="menu-inner__section-link">Кейс-пакеры</a>
+                                    <a href="#" class="menu-inner__section-link">Системы инспекции для упаковочного
+                                        оборудования</a>
+                                    <a href="#" class="menu-inner__section-link">Другое упаковочное оборудование</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-inner__section js-menu-inner-section" data-inner-section="4">
+
+                        <div class="menu-inner__section-inner">
+                            <picture class="menu-inner__section-bottom-img">
+                                <img src="./images/menu/menu-block-4.png" alt="">
+                            </picture>
+                            <div class="menu-inner__section-main">
+                                <div class="menu-inner__section-desc">
+                                    <p>
+                                        Компания ИСТ-ПАК реализует широкий спектр оборудования для производства пищевых
+                                        продуктов и бытовой химии: гомогенизаторы и смесители, просеиватели,
+                                        тубонаполнительные машины, линии розлива.
+                                    </p>
+                                    <p>
+                                        Для нестандартных задач разрабатываем индивидуальные решения: от машин для
+                                        посудомоечных таблеток до таблеточных прессов для производства конфет.
+                                    </p>
+                                </div>
+                                <a href="#" class="menu-inner__section-btn btn btn--secondary">В каталог</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-inner__section js-menu-inner-section" data-inner-section="5">
+                        <div class="menu-inner__section-inner">
+                            <picture class="menu-inner__section-bottom-img">
+                                <img src="./images/menu/menu-block-5.png" alt="">
+                            </picture>
+                            <div class="menu-inner__section-main">
+                                <div class="menu-inner__section-desc">
+                                    <p>
+                                        Компания ИСТ-ПАК поставляет комплектующие и оснастку для промышленного
+                                        оборудования: пуансоны и матрицы, сита, ножи, уплотнения, форматные детали для
+                                        блистерных и картонажных машин.
+                                    </p>
+                                    <p>
+                                        Оригинальные запчасти от производителей или
+                                        качественные аналоги — подберем под вашу задачу.
+                                    </p>
+                                </div>
+                                <a href="#" class="menu-inner__section-btn btn btn--secondary">В каталог</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="menu-inner__section js-menu-inner-section" data-inner-section="6">
+                        <div class="menu-inner__section-inner">
+                            <div class="menu-inner__section-main">
+                                <div class="menu-inner__section-desc">
+                                    <p>
+                                        Некоторые позиции оборудования уже находятся на складе ИСТ-ПАК в Москве и
+                                        доступны
+                                        для отгрузки без предварительного ожидания.
+                                    </p>
+                                    <p>
+                                        Это стандартные универсальные решения от надежных производителей — для тех, кому
+                                        важна скорость и предсказуемость поставки.
+                                    </p>
+                                </div>
+                                <a href="#" class="menu-inner__section-btn btn btn--secondary">В каталог</a>
+                            </div>
+                            <div class="menu-inner__section-bnr">
+                                <div class="menu-inner__section-bnr-title">Оборудование в наличии на складе в Москве
+                                </div>
+                                <div class="menu-inner__section-bnr-subtitle">Блистерная машина Victory </div>
+                                <div class="menu-inner__section-bnr-desc">
+                                    Высокопроизводительное и компактное решение для упаковки таблеток и капсул в
+                                    блистеры
+                                </div>
+                                <a href="#" class="menu-inner__section-bnr-btn btn btn--white">Подробнее</a>
+                                <picture class="menu-inner__section-bnr-img">
+                                    <img src="./images/menu/menu-bnr-01.png" alt="">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-inner__section js-menu-inner-section" data-inner-section="7">
+                        <div class="menu-inner__section-inner">
+                            <div class="menu-inner__section-main">
+                                <div class="menu-inner__section-desc">
+                                    <p>
+                                        ИСТ-ПАК помогает предприятиям покупать и продавать бывшее в употреблении
+                                        оборудование для фармацевтики, пищевой и косметической промышленности.
+                                    </p>
+                                    <p>
+                                        Подберем проверенное БУ оборудование для вашего производства или поможем выгодно
+                                        реализовать неиспользуемые активы. 
+                                    </p>
+                                </div>
+                                <a href="#" class="menu-inner__section-btn btn btn--secondary">В каталог</a>
+                            </div>
+                            <div class="menu-inner__section-bnr">
+                                <div class="menu-inner__section-bnr-title">Хотите продать своё оборудование?</div>
+                                <div class="menu-inner__section-bnr-desc">
+                                    <p>
+                                        Направьте запрос на размещение на адрес 
+                                        <a href="mailto:sales@eapack.ru">sales@eapack.ru</a>
+                                    </p>
+                                    <p>
+                                        Для оперативного рассмотрения приложите: детальное описание, технические
+                                        паспорта,
+                                        фото/видео работы оборудования и информацию о его текущем состоянии
+                                    </p>
+                                </div>
+                                <picture class="menu-inner__section-bnr-img">
+                                    <img src="./images/menu/menu-bnr-02.png" alt="">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu-inner js-menu-inner" data-menu-inner="about">
+        <div class="menu-inner__overlay js-menu-inner-close"></div>
+        <div class="container">
+            <div class="menu-inner__content">
+                <button class="menu-inner__close reset-btn js-menu-inner-close"></button>
+                <div class="menu-inner__nav">
+                    <a href="#" class="menu-inner__nav-link">Новости и события</a>
+                    <a href="#" class="menu-inner__nav-link">Полезные материалы</a>
+                    <a href="#" class="menu-inner__nav-link">Вакансии</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="menu js-menu">
         <div class="menu__inner">
             <div class="menu__nav">
@@ -147,8 +495,9 @@
                             <img src="./images/logo.png" alt="">
                         </a>
                         <h1 class="hero__title">
-                            Надёжное <br> оборудование <br> для производства <br> и упаковки <br> <span>лекарств БАДов
-                                космети</span>
+                            Надёжное <br> оборудование <br> для производства <br> и упаковки <br> <span
+                                class="is-active" data-slide-title="0">лекарств</span>
+                            <span data-slide-title="1">БАДов</span> <span data-slide-title="2">космети</span>
                         </h1>
                         <div class="hero__actions">
                             <a href="#" class="hero__btn btn btn--secondary">В каталог</a>
