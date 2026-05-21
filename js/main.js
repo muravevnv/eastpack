@@ -172,7 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeaderFixed();
 
     function iniInnerMenu() {
-        // Вспомогательная функция для переключения активных классов
         const toggleActiveLevel = (items, targetSelector, activeAttr, activeValue) => {
             items.forEach(item => item.classList.remove('is-active'));
 
@@ -182,7 +181,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
 
-        // Собираем все группы элементов
         const innerMenuBtns = document.querySelectorAll('.js-menu-inner-btn');
         const innerMenus = document.querySelectorAll('.js-menu-inner');
         const innerMenuClose = document.querySelectorAll('.js-menu-inner-close');
@@ -193,7 +191,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const menuInnerSubmenusItems = document.querySelectorAll('.js-menu-inner-submenu-item');
         const menuInnerBlocks = document.querySelectorAll('.js-menu-inner-block');
 
-        // Функция полного сброса всех уровней меню
         const resetAllMenus = () => {
             const allElements = [
                 ...innerMenus,
@@ -206,7 +203,6 @@ document.addEventListener('DOMContentLoaded', () => {
             allElements.forEach(el => el.classList.remove('is-active'));
         };
 
-        // 1. Главные кнопки меню
         innerMenuBtns.forEach(btn => {
             btn.addEventListener('mouseenter', () => {
                 const target = btn.getAttribute('data-menu-inner-btn');
@@ -215,12 +211,10 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Кнопка закрытия (теперь с полным сбросом)
         innerMenuClose.forEach(btn => {
             btn.addEventListener('click', resetAllMenus);
         });
 
-        // 2. Вложенные пункты (Items -> Sections)
         menuInnerItems.forEach(item => {
             item.addEventListener('mouseenter', () => {
                 const target = item.getAttribute('data-inner-item');
@@ -229,7 +223,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // 3. Подменю глубокого уровня (Submenus -> Blocks)
         menuInnerSubmenusItems.forEach(item => {
             item.addEventListener('mouseenter', () => {
                 const target = item.getAttribute('data-inner-submenu-item');
@@ -239,7 +232,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Инициализация
     iniInnerMenu();
 
     const partnersData = {
