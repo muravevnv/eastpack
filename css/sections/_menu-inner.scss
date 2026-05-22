@@ -17,7 +17,7 @@
         right: 16px;
         width: 18px;
         height: 18px;
-        background: url('../../images/icons/close.svg') center center / 18px no-repeat;
+        background: url('../images/icons/close.svg') center center / 18px no-repeat;
         cursor: pointer;
         z-index: 10;
     }
@@ -73,7 +73,7 @@
                 display: block;
                 width: 32px;
                 height: 32px;
-                background: url('../../images/icons/slider-chevron-right.svg') center center / 20px no-repeat, var(--color-primary);
+                background: url('../images/icons/slider-chevron-right.svg') center center / 20px no-repeat, var(--color-primary);
                 flex-shrink: 0;
             }
         }
@@ -112,7 +112,7 @@
             display: block;
             width: 32px;
             height: 32px;
-            background: url('../../images/icons/slider-chevron-right.svg') center center / 20px no-repeat, var(--color-grey-150);
+            background: url('../images/icons/slider-chevron-right.svg') center center / 20px no-repeat, var(--color-grey-150);
             flex-shrink: 0;
         }
     }

@@ -63,13 +63,18 @@ a {
 }
 
 .container {
-  --container-width: 1232px;
+  --container-width: 80vw;
   --container-padding: 16px;
   --side-gap: calc((100vw - var(--container-width)) / 2 + var(--container-padding));
   max-width: var(--container-width);
   padding: 0 var(--container-padding);
   margin: 0 auto;
   width: 100%;
+}
+@media screen and (max-width: 1232px) {
+  .container {
+    --container-width: 1232px;
+  }
 }
 .container--wide {
   max-width: 100%;
@@ -493,7 +498,7 @@ a {
   line-height: 1.25;
   border: none;
   border-radius: 0;
-  background: url("../../images/icons/search.svg") center right/19px no-repeat, transparent;
+  background: url("../images/icons/search.svg") center right/19px no-repeat, transparent;
   outline: none;
   border-bottom: 1px solid var(--color-dark);
 }
@@ -567,6 +572,7 @@ a {
   padding: 0;
 }
 .header__nav-item {
+  display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -581,8 +587,8 @@ a {
   display: block;
   width: 12px;
   height: 6px;
-  mask: url("../../images/icons/chevron-down.svg") center center/12px no-repeat;
-  -webkit-mask: url("../../images/icons/chevron-down.svg") center center/12px no-repeat;
+  mask: url("../images/icons/chevron-down.svg") center center/12px no-repeat;
+  -webkit-mask: url("../images/icons/chevron-down.svg") center center/12px no-repeat;
   background-color: currentColor;
 }
 .header__nav-link {
@@ -809,6 +815,9 @@ a {
   width: 150px;
 }
 .hero__title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   max-width: 500px;
   font-size: 32px;
   line-height: 1.2;
@@ -819,12 +828,19 @@ a {
     font-size: 24px;
   }
 }
-.hero__title span {
+.hero__title-bottom {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.hero__title-bottom span {
+  display: block;
   color: var(--color-grey);
   cursor: pointer;
 }
-.hero__title span.is-active {
+.hero__title-bottom span.is-active {
   color: var(--color-black);
+  order: -1;
 }
 .hero__inner {
   display: grid;
@@ -1006,8 +1022,8 @@ a {
   display: block;
   width: 7px;
   height: 12px;
-  mask: url("../../images/icons/chevron-right.svg") center center/7px no-repeat;
-  -webkit-mask: url("../../images/icons/chevron-right.svg") center center/7px no-repeat;
+  mask: url("../images/icons/chevron-right.svg") center center/7px no-repeat;
+  -webkit-mask: url("../images/icons/chevron-right.svg") center center/7px no-repeat;
   background-color: currentColor;
 }
 
@@ -1021,7 +1037,7 @@ a {
   }
 }
 .our-projects__title {
-  max-width: 680px;
+  max-width: 600px;
   text-align: center;
 }
 .our-projects__top {
@@ -2212,7 +2228,7 @@ a {
   right: 20px;
   width: 18px;
   height: 18px;
-  background: url("../../images/icons/close.svg") center center/18px no-repeat;
+  background: url("../images/icons/close.svg") center center/18px no-repeat;
   border: none;
   outline: none;
   cursor: pointer;
@@ -2556,7 +2572,7 @@ a {
   content: "";
   width: 32px;
   height: 32px;
-  background: url("../../images/icons/slider-chevron-right.svg") center center/20px no-repeat, var(--color-primary);
+  background: url("../images/icons/slider-chevron-right.svg") center center/20px no-repeat, var(--color-primary);
 }
 .menu__section {
   position: absolute;
@@ -2590,7 +2606,7 @@ a {
   content: "";
   width: 32px;
   height: 32px;
-  background: url("../../images/icons/slider-chevron-left.svg") center center/20px no-repeat, var(--color-grey-150);
+  background: url("../images/icons/slider-chevron-left.svg") center center/20px no-repeat, var(--color-grey-150);
 }
 .menu__section-to-catalog {
   font-size: 14px;
@@ -2625,7 +2641,7 @@ a {
   content: "";
   width: 32px;
   height: 32px;
-  background: url("../../images/icons/slider-chevron-right.svg") center center/20px no-repeat, var(--color-primary);
+  background: url("../images/icons/slider-chevron-right.svg") center center/20px no-repeat, var(--color-primary);
 }
 
 .menu-inner {
@@ -2646,7 +2662,7 @@ a {
   right: 16px;
   width: 18px;
   height: 18px;
-  background: url("../../images/icons/close.svg") center center/18px no-repeat;
+  background: url("../images/icons/close.svg") center center/18px no-repeat;
   cursor: pointer;
   z-index: 10;
 }
@@ -2697,7 +2713,7 @@ a {
   display: block;
   width: 32px;
   height: 32px;
-  background: url("../../images/icons/slider-chevron-right.svg") center center/20px no-repeat, var(--color-primary);
+  background: url("../images/icons/slider-chevron-right.svg") center center/20px no-repeat, var(--color-primary);
   flex-shrink: 0;
 }
 .menu-inner__main {
@@ -2729,7 +2745,7 @@ a {
   display: block;
   width: 32px;
   height: 32px;
-  background: url("../../images/icons/slider-chevron-right.svg") center center/20px no-repeat, var(--color-grey-150);
+  background: url("../images/icons/slider-chevron-right.svg") center center/20px no-repeat, var(--color-grey-150);
   flex-shrink: 0;
 }
 .menu-inner__sections {

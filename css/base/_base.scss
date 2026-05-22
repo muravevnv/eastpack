@@ -26,7 +26,7 @@ a {
 }
 
 .container {
-    --container-width: 1232px;
+    --container-width: 80vw;
     --container-padding: 16px;
     --side-gap: calc((100vw - var(--container-width)) / 2 + var(--container-padding));
 
@@ -34,6 +34,10 @@ a {
     padding: 0 var(--container-padding);
     margin: 0 auto;
     width: 100%;
+
+    @media screen and (max-width: 1232px) {
+        --container-width: 1232px;
+    }
 
     &--wide {
         max-width: 100%;
