@@ -2456,6 +2456,38 @@ a {
   bottom: 0;
   right: 0;
 }
+.hardware__block-info {
+  position: relative;
+  grid-column: span 3;
+  padding: 32px 180px 32px 32px;
+  border-bottom: 1px solid var(--color-grey-150);
+  border-right: 1px solid var(--color-grey-150);
+}
+.hardware__block-desc {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 40px;
+  gap: 32px;
+}
+@media screen and (max-width: 1279.98px) {
+  .hardware__block-desc {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+.hardware__block-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+}
+.hardware__block-img img {
+  display: block;
+  width: 100%;
+}
+.hardware__block-btn {
+  width: 200px;
+}
 .hardware__spollers {
   display: none;
 }
