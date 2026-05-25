@@ -61,6 +61,15 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+
+    if (document.querySelector('.js-hardware-slider')) {
+        const hardwareSlider = new Swiper('.js-hardware-slider', {
+            slidesPerView: 'auto',
+            freeMode: true,
+        })
+    }
+
+
     if (document.querySelector('.js-projects-nav-slider')) {
 
         function handleSlideChange(swiper) {
@@ -486,4 +495,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     initMenu();
+
 })
