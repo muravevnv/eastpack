@@ -35,6 +35,10 @@
     color: var(--color-black-25)
 }
 
+textarea {
+    resize: none;
+}
+
 .form-checkbox {
     position: relative;
     width: 100%;

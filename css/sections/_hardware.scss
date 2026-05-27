@@ -198,6 +198,21 @@
                 }
             }
 
+            &--more {
+                align-items: center;
+                justify-content: center;
+                padding: 44px;
+                justify-content: space-between;
+            }
+
+            &-head {
+                font-size: 20px;
+
+                @media screen and (max-width: 1023.98px) {
+                    font-size: 16px;
+                }
+            }
+
             &-title {
                 font-size: 16px;
             }

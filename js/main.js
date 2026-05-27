@@ -1,24 +1,43 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     if (document.querySelector('.js-hero-slider')) {
+        const slideTitles = document.querySelectorAll('[data-slide-title]');
+
         const stepsSlider = new Swiper('.js-hero-slider', {
             slidesPerView: 1,
             spaceBetween: 16,
             navigation: {
                 prevEl: '.js-hero-slider-prev',
                 nextEl: '.js-hero-slider-next'
-            }
-        })
+            },
+            on: {
+                slideChange: function () {
+                    const activeIndex = this.realIndex;
 
-        const slideTitles = document.querySelectorAll('[data-slide-title]');
+                    if (slideTitles.length > 0) {
+                        slideTitles.forEach(title => title.classList.remove('is-active'));
+
+                        const currentTitle = Array.from(slideTitles).find(
+                            title => parseInt(title.getAttribute('data-slide-title')) === activeIndex
+                        );
+
+                        if (currentTitle) {
+                            currentTitle.classList.add('is-active');
+                        }
+                    }
+                }
+            }
+        });
 
         if (slideTitles.length > 0) {
             slideTitles.forEach(slideTitle => {
                 slideTitle.addEventListener('click', () => {
-                    slideTitles.forEach(slideTitle => slideTitle.classList.remove('is-active'));
+                    const targetIndex = parseInt(slideTitle.getAttribute('data-slide-title'));
+                    stepsSlider.slideTo(targetIndex);
+
+                    slideTitles.forEach(title => title.classList.remove('is-active'));
                     slideTitle.classList.add('is-active');
-                    stepsSlider.slideTo(parseInt(slideTitle.getAttribute('data-slide-title')));
-                })
+                });
             });
         }
     }

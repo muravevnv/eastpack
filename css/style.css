@@ -188,6 +188,10 @@ a {
   color: var(--color-black-25);
 }
 
+textarea {
+  resize: none;
+}
+
 .form-checkbox {
   position: relative;
   width: 100%;
@@ -590,6 +594,11 @@ a {
   mask: url("../images/icons/chevron-down.svg") center center/12px no-repeat;
   -webkit-mask: url("../images/icons/chevron-down.svg") center center/12px no-repeat;
   background-color: currentColor;
+  transform: rotate(-90deg);
+  transition: transform 0.25s ease-in-out;
+}
+.header__nav-item--dropdown.is-active .header__nav-link::after {
+  transform: rotate(0);
 }
 .header__nav-link {
   font-size: 12px;
@@ -676,18 +685,18 @@ a {
   }
 }
 .footer__nav-head {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.2;
   text-transform: uppercase;
 }
 .footer__nav-link {
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.2;
   color: var(--color-grey-300);
 }
 .footer__copy {
   margin-top: 40px;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.2;
 }
 .footer__sub {
@@ -1569,7 +1578,6 @@ a {
   }
 }
 .order-call__head {
-  max-width: 528px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -2468,6 +2476,20 @@ a {
   }
   .hardware__block-item:hover .slider-btn {
     background-color: var(--color-white);
+  }
+}
+.hardware__block-item--more {
+  align-items: center;
+  justify-content: center;
+  padding: 44px;
+  justify-content: space-between;
+}
+.hardware__block-item-head {
+  font-size: 20px;
+}
+@media screen and (max-width: 1023.98px) {
+  .hardware__block-item-head {
+    font-size: 16px;
   }
 }
 .hardware__block-item-title {

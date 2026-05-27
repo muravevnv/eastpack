@@ -305,7 +305,15 @@
                         mask: url('../images/icons/chevron-down.svg') center center / 12px no-repeat;
                         -webkit-mask: url('../images/icons/chevron-down.svg') center center / 12px no-repeat;
                         background-color: currentColor;
+                        transform: rotate(-90deg);
+                        transition: transform 0.25s ease-in-out;
+                    }
+                }
 
+                &.is-active {
+
+                    .header__nav-link::after {
+                        transform: rotate(0);
                     }
                 }
             }
