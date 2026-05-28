@@ -27,49 +27,38 @@ a {
 
 .container {
     --container-width: 80vw;
-    --container-padding: 16px;
+    --container-padding: 120px;
     --side-gap: calc((100vw - var(--container-width)) / 2 + var(--container-padding));
 
-    max-width: var(--container-width);
+    max-width: 100%;
     padding: 0 var(--container-padding);
     margin: 0 auto;
     width: 100%;
 
-    @media screen and (max-width: 1232px) {
-        --container-width: 1232px;
+    @media screen and (max-width: 1399.98px) {
+        --container-padding: 16px;
     }
 
     &--wide {
         max-width: 100%;
+        padding: 0 16px;
     }
 
     &--expand-right {
-        max-width: none;
-        margin-left: auto;
-        margin-right: 0;
-        padding-left: 0;
-        padding-right: 0;
-        width: calc(100vw - calc(var(--container-padding) / 2) - var(--side-gap));
-
-        @media screen and (max-width: 1232px) {
-            max-width: 100%;
-            width: 100%;
-            padding: 0 var(--container-padding);
+        padding-left: 120px;
+        padding-right: 16px;
+        @media screen and (max-width: 1399.98px) {
+            padding-left: 16px;
+            padding-right: 16px;
         }
     }
 
     &--expand-left {
-        max-width: none;
-        margin-right: auto;
-        margin-left: 0;
-        padding-right: 0;
-        padding-left: 0;
-        width: calc(100vw - calc(var(--container-padding) / 2) var(--side-gap));
-
-        @media screen and (max-width: 1232px) {
-            max-width: 100%;
-            width: 100%;
-            padding: 0 var(--container-padding);
+        padding-left: 16px;
+        padding-right: 120px;
+        @media screen and (max-width: 1399.98px) {
+            padding-left: 16px;
+            padding-right: 16px;
         }
     }
 }
