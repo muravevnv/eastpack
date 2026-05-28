@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 prevEl: '.js-hero-slider-prev',
                 nextEl: '.js-hero-slider-next'
             },
+            loop: true,
             on: {
                 slideChange: function () {
                     const activeIndex = this.realIndex;
