@@ -2367,6 +2367,9 @@ textarea {
 .hardware__categories-btn.is-active {
   background-color: var(--color-primary);
 }
+.hardware__slider {
+  max-width: 100%;
+}
 @media screen and (max-width: 767.98px) {
   .hardware__sections {
     display: none;
@@ -2399,6 +2402,19 @@ textarea {
   .hardware__block {
     width: 100%;
     flex-shrink: unset;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .hardware__block--line .hardware__block-head {
+    grid-column: span 1;
+  }
+  .hardware__block--line .hardware__block-info {
+    grid-column: span 3;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .hardware__block--line .hardware__block-head {
+    grid-column: span 3;
   }
 }
 .hardware__block-row {
@@ -2496,7 +2512,7 @@ textarea {
 }
 .hardware__block-info {
   position: relative;
-  grid-column: span 3;
+  grid-column: span 4;
   padding: 32px 180px 32px 32px;
   border-bottom: 1px solid var(--color-grey-150);
   border-right: 1px solid var(--color-grey-150);

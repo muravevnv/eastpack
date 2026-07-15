@@ -85,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.js-hardware-slider')) {
         const hardwareSlider = new Swiper('.js-hardware-slider', {
             slidesPerView: 'auto',
+            spaceBetween: 16,
             freeMode: true,
         })
     }
@@ -200,111 +201,113 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initHeaderFixed();
 
-function iniInnerMenu() {
-    let timeoutId = null;
+    function iniInnerMenu() {
+        let timeoutId = null;
 
-    const toggleActiveLevel = (items, targetSelector, activeAttr, activeValue) => {
-        items.forEach(item => item.classList.remove('is-active'));
+        const toggleActiveLevel = (items, targetSelector, activeAttr, activeValue) => {
+            items.forEach(item => item.classList.remove('is-active'));
 
-        const targetEl = document.querySelector(`${targetSelector}[${activeAttr}="${activeValue}"]`);
-        if (targetEl) {
-            targetEl.classList.add('is-active');
-        }
-    };
+            const targetEl = document.querySelector(`${targetSelector}[${activeAttr}="${activeValue}"]`);
+            if (targetEl) {
+                targetEl.classList.add('is-active');
+            }
+        };
 
-    const clearTimer = () => {
-        if (timeoutId) {
-            clearTimeout(timeoutId);
-            timeoutId = null;
-        }
-    };
-
-    const resetAllMenus = () => {
-        const allElements = [
-            ...document.querySelectorAll('.js-menu-inner'),
-            ...document.querySelectorAll('.js-menu-inner-btn'),
-            ...document.querySelectorAll('.js-menu-inner-item'),
-            ...document.querySelectorAll('.js-menu-inner-section'),
-            ...document.querySelectorAll('.js-menu-inner-submenu-item'),
-            ...document.querySelectorAll('.js-menu-inner-block')
-        ];
-        allElements.forEach(el => el.classList.remove('is-active'));
-    };
-
-    const btns = document.querySelectorAll('.js-menu-inner-btn');
-    const menus = document.querySelectorAll('.js-menu-inner');
-
-    btns.forEach(btn => {
-        btn.addEventListener('mouseenter', () => {
-            clearTimer();
-            const target = btn.getAttribute('data-menu-inner-btn');
-            toggleActiveLevel(menus, '.js-menu-inner', 'data-menu-inner', target);
-            btns.forEach(b => b.classList.toggle('is-active', b === btn));
-        });
-
-        btn.addEventListener('mouseleave', () => {
-            clearTimer();
-            timeoutId = setTimeout(() => {
-                const isHoveringBtn = btn.matches(':hover');
-                const activeMenu = document.querySelector('.js-menu-inner.is-active');
-                const isHoveringMenu = activeMenu && activeMenu.matches(':hover');
-                
-                if (!isHoveringBtn && !isHoveringMenu) {
-                    resetAllMenus();
-                }
+        const clearTimer = () => {
+            if (timeoutId) {
+                clearTimeout(timeoutId);
                 timeoutId = null;
-            }, 150);
+            }
+        };
+
+        const resetAllMenus = () => {
+            const allElements = [
+                ...document.querySelectorAll('.js-menu-inner'),
+                ...document.querySelectorAll('.js-menu-inner-btn'),
+                ...document.querySelectorAll('.js-menu-inner-item'),
+                ...document.querySelectorAll('.js-menu-inner-section'),
+                ...document.querySelectorAll('.js-menu-inner-submenu-item'),
+                ...document.querySelectorAll('.js-menu-inner-block')
+            ];
+            allElements.forEach(el => el.classList.remove('is-active'));
+        };
+
+        const btns = document.querySelectorAll('.js-menu-inner-btn');
+        const menus = document.querySelectorAll('.js-menu-inner');
+
+        btns.forEach(btn => {
+            btn.addEventListener('mouseenter', () => {
+                clearTimer();
+                const target = btn.getAttribute('data-menu-inner-btn');
+                toggleActiveLevel(menus, '.js-menu-inner', 'data-menu-inner', target);
+                btns.forEach(b => b.classList.toggle('is-active', b === btn));
+            });
+
+            btn.addEventListener('mouseleave', () => {
+                clearTimer();
+                timeoutId = setTimeout(() => {
+                    const isHoveringBtn = btn.matches(':hover');
+                    const activeMenu = document.querySelector('.js-menu-inner.is-active');
+                    const isHoveringMenu = activeMenu && activeMenu.matches(':hover');
+
+                    if (!isHoveringBtn && !isHoveringMenu) {
+                        resetAllMenus();
+                    }
+                    timeoutId = null;
+                }, 150);
+            });
         });
-    });
 
-    menus.forEach(menu => {
-        menu.addEventListener('mouseenter', () => {
-            clearTimer();
+        menus.forEach(menu => {
+            menu.addEventListener('mouseenter', () => {
+                clearTimer();
+            });
+
+            menu.addEventListener('mouseleave', () => {
+                clearTimer();
+                timeoutId = setTimeout(() => {
+                    const activeBtn = document.querySelector('.js-menu-inner-btn.is-active');
+                    const isHoveringBtn = activeBtn && activeBtn.matches(':hover');
+                    const isHoveringMenu = menu.matches(':hover');
+
+                    if (!isHoveringBtn && !isHoveringMenu) {
+                        resetAllMenus();
+                    }
+                    timeoutId = null;
+                }, 150);
+            });
         });
 
-        menu.addEventListener('mouseleave', () => {
-            clearTimer();
-            timeoutId = setTimeout(() => {
-                const activeBtn = document.querySelector('.js-menu-inner-btn.is-active');
-                const isHoveringBtn = activeBtn && activeBtn.matches(':hover');
-                const isHoveringMenu = menu.matches(':hover');
-                
-                if (!isHoveringBtn && !isHoveringMenu) {
-                    resetAllMenus();
-                }
-                timeoutId = null;
-            }, 150);
+
+
+        const menuInnerItems = document.querySelectorAll('.js-menu-inner-item');
+        const menuInnerSections = document.querySelectorAll('.js-menu-inner-section');
+        const menuInnerSubmenusItems = document.querySelectorAll('.js-menu-inner-submenu-item');
+        const menuInnerBlocks = document.querySelectorAll('.js-menu-inner-block');
+        const innerMenuClose = document.querySelectorAll('.js-menu-inner-close');
+
+        menuInnerItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                const target = item.getAttribute('data-inner-item');
+                toggleActiveLevel(menuInnerSections, '.js-menu-inner-section', 'data-inner-section', target);
+                menuInnerItems.forEach(i => i.classList.toggle('is-active', i === item));
+            });
         });
-    });
 
-    const menuInnerItems = document.querySelectorAll('.js-menu-inner-item');
-    const menuInnerSections = document.querySelectorAll('.js-menu-inner-section');
-    const menuInnerSubmenusItems = document.querySelectorAll('.js-menu-inner-submenu-item');
-    const menuInnerBlocks = document.querySelectorAll('.js-menu-inner-block');
-    const innerMenuClose = document.querySelectorAll('.js-menu-inner-close');
-
-    menuInnerItems.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-            const target = item.getAttribute('data-inner-item');
-            toggleActiveLevel(menuInnerSections, '.js-menu-inner-section', 'data-inner-section', target);
-            menuInnerItems.forEach(i => i.classList.toggle('is-active', i === item));
+        menuInnerSubmenusItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                const target = item.getAttribute('data-inner-submenu-item');
+                toggleActiveLevel(menuInnerBlocks, '.js-menu-inner-block', 'data-inner-submenu-block', target);
+                menuInnerSubmenusItems.forEach(i => i.classList.toggle('is-active', i === item));
+            });
         });
-    });
 
-    menuInnerSubmenusItems.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-            const target = item.getAttribute('data-inner-submenu-item');
-            toggleActiveLevel(menuInnerBlocks, '.js-menu-inner-block', 'data-inner-submenu-block', target);
-            menuInnerSubmenusItems.forEach(i => i.classList.toggle('is-active', i === item));
+        innerMenuClose.forEach(btn => {
+            btn.addEventListener('click', resetAllMenus);
         });
-    });
+    }
 
-    innerMenuClose.forEach(btn => {
-        btn.addEventListener('click', resetAllMenus);
-    });
-}
-
-iniInnerMenu();
+    iniInnerMenu();
 
     const partnersData = {
         "1": {
@@ -452,14 +455,14 @@ iniInnerMenu();
 
                         if (sectionPath === targetTabPath) {
                             section.classList.add('is-active');
-                            
-                            const parentSlider = section.closest('.js-hardware-slider ');
-                            console.log(parentSlider)
 
-                            if (parentSlider && parentSlider.swiper) {
-                                parentSlider.swiper.slideTo(0, 0);
+                            const slider = section.querySelector('.js-hardware-slider');
+
+                            if (slider?.swiper) {
+                                slider.swiper.slideTo(0, 0);
+                                slider.swiper.update();
                             }
-                            
+
                         } else {
                             section.classList.remove('is-active');
                         }
