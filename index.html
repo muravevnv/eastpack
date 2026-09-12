@@ -488,7 +488,7 @@
     </div>
     <main>
         <section class="hero">
-            <div class="container container--expand-right">
+            <div class="container container--wide">
                 <div class="hero__inner">
                     <div class="hero__info">
                         <a href="#" class="hero__logo">
@@ -514,16 +514,19 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <picture class="hero__img">
+                                        <source srcset="./images/hero/hero-01-mob.png" media="(max-width: 1023.98px)">
                                         <img src="./images/hero/hero-01.png" alt="">
                                     </picture>
                                 </div>
                                 <div class="swiper-slide">
                                     <picture class="hero__img">
+                                        <source srcset="./images/hero/hero-02-mob.png" media="(max-width: 1023.98px)">
                                         <img src="./images/hero/hero-02.png" alt="">
                                     </picture>
                                 </div>
                                 <div class="swiper-slide">
                                     <picture class="hero__img">
+                                        <source srcset="./images/hero/hero-03-mob.png" media="(max-width: 1023.98px)">
                                         <img src="./images/hero/hero-03.png" alt="">
                                     </picture>
                                 </div>
@@ -559,27 +562,61 @@
         </section>
         <section class="benefits">
             <div class="benefits__inner">
-                <picture class="benefits__img">
-                    <img src="./images/benefits/benefits.png" alt="">
-                </picture>
+                <div class="benefits__preview">
+                    <picture class="benefits__img is-visible" data-benefit-img="01">
+                        <img src="./images/benefits/benefit-01.png" alt="">
+                    </picture>
+                    <picture class="benefits__img" data-benefit-img="02">
+                        <img src="./images/benefits/benefit-02.png" alt="">
+                    </picture>
+                    <picture class="benefits__img" data-benefit-img="03">
+                        <img src="./images/benefits/benefit-03.jpg" alt="">
+                    </picture>
+                </div>
+
                 <div class="benefits__items">
-                    <div class="benefits__item">
+                    <div class="benefits__item" data-benefit="01">
                         <div class="benefits__item-title">
-                            Создаём <br> производственные <br> линии под ключ
+                            Создаём производственные <br> линии с нуля
                         </div>
-                        <a href="#" class="benefits__item-link hover-default">Оставить заявку </a>
+                        <a href="#" class="benefits__item-link hover-default">Обсудить проект 
+
+                            <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0 0.761385L5.00446 5.76477L0 10.7682L0.761384 11.5306L6.52723 5.76477L0.761384 0L0 0.761385Z"
+                                    fill="#66A4B1" />
+                            </svg>
+                        </a>
                     </div>
-                    <div class="benefits__item">
+                    <div class="benefits__item" data-benefit="02">
                         <div class="benefits__item-title">
-                            Поставляем <br> отдельные позиции <br> оборудования <br> из Европы и Азии
+                            Поставляем отдельные позиции <br> оборудования из Европы и Азии
                         </div>
-                        <a href="#" class="benefits__item-link hover-default">Оставить заявку </a>
+                        <a href="#" class="benefits__item-link hover-default">Обсудить проект
+
+                            <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0 0.761385L5.00446 5.76477L0 10.7682L0.761384 11.5306L6.52723 5.76477L0.761384 0L0 0.761385Z"
+                                    fill="#66A4B1" />
+                            </svg>
+
+                        </a>
                     </div>
-                    <div class="benefits__item">
-                        <div class="benefits__item-title">Оказываем <br> сервисную поддержку <br> и обеспечиваем <br>
-                            комплектующими
+                    <div class="benefits__item" data-benefit="03">
+                        <div class="benefits__item-title">
+                            Оказываем сервисную поддержку <br> и обеспечиваем комплектующими
                         </div>
-                        <a href="#" class="benefits__item-link hover-default">Оставить заявку </a>
+                        <a href="#" class="benefits__item-link hover-default">Обсудить проект 
+
+                            <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0 0.761385L5.00446 5.76477L0 10.7682L0.761384 11.5306L6.52723 5.76477L0.761384 0L0 0.761385Z"
+                                    fill="#66A4B1" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -872,372 +909,353 @@
                         сроки</h2>
                     <div class="hardware__desc">А некоторые позиции есть на нашем складе в Москве</div>
                 </div>
-                <div class="hardware__categories js-hardware-categories-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <button type="button" class="hardware__categories-btn reset-btn is-active"
-                                data-tabs-btn="1">
-                                <span class="hardware__categories-btn-title">Фармацевтическое <br> оборудование</span>
-                                <img src="./images/hardware/categories-01.png" class="hardware__categories-btn-img"
-                                    alt="">
-                            </button>
-                        </div>
-                        <div class="swiper-slide">
-                            <button type="button" class="hardware__categories-btn reset-btn" data-tabs-btn="2">
-                                <span class="hardware__categories-btn-title">Оборудование <br> для производства <br>
-                                    косметики</span>
-                                <img src="./images/hardware/categories-02.png" class="hardware__categories-btn-img"
-                                    alt="">
-                            </button>
-                        </div>
-                        <div class="swiper-slide">
-                            <button type="button" class="hardware__categories-btn reset-btn" data-tabs-btn="2">
-                                <span class="hardware__categories-btn-title">Упаковочное <br> оборудование</span>
-                                <img src="./images/hardware/categories-03.png" class="hardware__categories-btn-img"
-                                    alt="">
-                            </button>
-                        </div>
-                        <div class="swiper-slide">
-                            <button type="button" class="hardware__categories-btn reset-btn" data-tabs-btn="2">
-                                <span class="hardware__categories-btn-title">Оборудование <br> для пищевой <br> и
-                                    химической <br>
-                                    отраслей</span>
-                                <img src="./images/hardware/categories-04.png" class="hardware__categories-btn-img"
-                                    alt="">
-                            </button>
-                        </div>
-                        <div class="swiper-slide">
-                            <button type="button" class="hardware__categories-btn reset-btn" data-tabs-btn="2">
-                                <span class="hardware__categories-btn-title">Запчасти, форматная <br> оснастка, <br>
-                                    пресс-инструмент</span>
-                                <img src="./images/hardware/categories-05.png" class="hardware__categories-btn-img"
-                                    alt="">
-                            </button>
-                        </div>
-                        <div class="swiper-slide">
-                            <button type="button" class="hardware__categories-btn reset-btn" data-tabs-btn="2">
-                                <span class="hardware__categories-btn-title">Оборудование <br> в наличии</span>
-                                <img src="./images/hardware/categories-06.png" class="hardware__categories-btn-img"
-                                    alt="">
-                            </button>
-                        </div>
-                        <div class="swiper-slide">
-                            <button type="button" class="hardware__categories-btn reset-btn" data-tabs-btn="2">
-                                <span class="hardware__categories-btn-title">Оборудование <br> бывшее в
-                                    употреблении</span>
-                                <img src="./images/hardware/categories-07.png" class="hardware__categories-btn-img"
-                                    alt="">
-                            </button>
-                        </div>
-                    </div>
+                <div class="hardware__categories">
+                    <button type="button" class="hardware__categories-btn reset-btn is-active" data-tabs-btn="1">
+                        Фармацевтическое оборудование
+                    </button>
+                    <button type="button" class="hardware__categories-btn reset-btn" data-tabs-btn="2">
+                        Оборудование для производства косметики
+                    </button>
+                    <button type="button" class="hardware__categories-btn reset-btn" data-tabs-btn="2">
+                        Упаковочное оборудование
+                    </button>
+                    <button type="button" class="hardware__categories-btn reset-btn" data-tabs-btn="2">
+                        Оборудование для пищевой и химической отраслей
+                    </button>
+                    <button type="button" class="hardware__categories-btn reset-btn" data-tabs-btn="2">
+                        Запчасти, форматная оснастка, пресс-инструмент
+                    </button>
+                    <button type="button" class="hardware__categories-btn reset-btn" data-tabs-btn="2">
+                        Оборудование в наличии
+                    </button>
+                    <button type="button" class="hardware__categories-btn reset-btn" data-tabs-btn="2">
+                        Оборудование бывшее в употреблении
+                    </button>
                 </div>
                 <div class="hardware__sections">
                     <div class="hardware__section is-active" data-tabs-section="1">
-                        <div class="hardware__slider js-hardware-slider">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="hardware__block" id="hardware-scrollable">
-                                        <div class="hardware__block-row">
-                                            <div class="hardware__block-head">
-                                                Для производства <br>
-                                                твердых лекарственных <br>
-                                                форм (ТЛФ)
+                        <div class="hardware__catalog">
+                            <div class="hardware__catalog-nav">
+                                <div class="hardware__catalog-nav-line">
+                                    <a href="#" class="hardware__catalog-nav-title">
+                                        Для производства
+                                        твердых лекарственных
+                                        форм (ТЛФ)
+                                    </a>
+                                </div>
+                                <div class="hardware__catalog-nav-line">
+                                    <a href="#" class="hardware__catalog-nav-title">
+                                        Для производства
+                                        жидких лекарственных
+                                        форм (ЖЛФ)
+                                    </a>
+                                </div>
+                                <div class="hardware__catalog-nav-line">
+                                    <a href="#" class="hardware__catalog-nav-title">
+                                        Для производства мазей, кремов и суппозиториев
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="hardware__catalog-items js-hardware-catalog-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="hardware__catalog-rows">
+                                            <div class="hardware__catalog-row">
+                                                <a href="#" class="hardware__catalog-item">
+                                                    <div class="hardware__catalog-item-title">Таблеточные прессы</div>
+                                                    <div class="hardware__catalog-item-icon slider-btn">
+                                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                                fill="#101618" />
+                                                            <path
+                                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                                fill="#101618" />
+                                                        </svg>
+                                                    </div>
+                                                    <picture class="hardware__catalog-item-img">
+                                                        <img src="./images/hardware/img-01.png" alt="">
+                                                    </picture>
+                                                </a>
+                                                <a href="#" class="hardware__catalog-item">
+                                                    <div class="hardware__catalog-item-title">Таблеточные прессы</div>
+                                                    <div class="hardware__catalog-item-icon slider-btn">
+                                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                                fill="#101618" />
+                                                            <path
+                                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                                fill="#101618" />
+                                                        </svg>
+                                                    </div>
+                                                    <picture class="hardware__catalog-item-img">
+                                                        <img src="./images/hardware/img-01.png" alt="">
+                                                    </picture>
+                                                </a>
+                                                <a href="#" class="hardware__catalog-item">
+                                                    <div class="hardware__catalog-item-title">Таблеточные прессы</div>
+                                                    <div class="hardware__catalog-item-icon slider-btn">
+                                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                                fill="#101618" />
+                                                            <path
+                                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                                fill="#101618" />
+                                                        </svg>
+                                                    </div>
+                                                    <picture class="hardware__catalog-item-img">
+                                                        <img src="./images/hardware/img-01.png" alt="">
+                                                    </picture>
+                                                </a>
+                                                <a href="#" class="hardware__catalog-item">
+                                                    <div class="hardware__catalog-item-title">Таблеточные прессы</div>
+                                                    <div class="hardware__catalog-item-icon slider-btn">
+                                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                                fill="#101618" />
+                                                            <path
+                                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                                fill="#101618" />
+                                                        </svg>
+                                                    </div>
+                                                    <picture class="hardware__catalog-item-img">
+                                                        <img src="./images/hardware/img-01.png" alt="">
+                                                    </picture>
+                                                </a>
+                                                <a href="#" class="hardware__catalog-item">
+                                                    <div class="hardware__catalog-item-title">Таблеточные прессы</div>
+                                                    <div class="hardware__catalog-item-icon slider-btn">
+                                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                                fill="#101618" />
+                                                            <path
+                                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                                fill="#101618" />
+                                                        </svg>
+                                                    </div>
+                                                    <picture class="hardware__catalog-item-img">
+                                                        <img src="./images/hardware/img-01.png" alt="">
+                                                    </picture>
+                                                </a>
+                                                <a href="/oborudovanie/tverdye-lekarstvennye-formy"
+                                                    class="hardware__catalog-item hardware__catalog-item--more">
+                                                    <div class="hardware__catalog-item-head">Перейти <br> в каталог
+                                                    </div>
+                                                    <div class="hardware__catalog-item-icon slider-btn">
+                                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                                fill="#101618"></path>
+                                                            <path
+                                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                                fill="#101618"></path>
+                                                        </svg>
+                                                    </div>
+                                                </a>
                                             </div>
-                                            <a href="#" class="hardware__block-item">
-                                                <div class="hardware__block-item-title">Таблеточные прессы</div>
-                                                <div class="hardware__block-item-icon slider-btn">
-                                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
-                                                            fill="#101618" />
-                                                        <path
-                                                            d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
-                                                            fill="#101618" />
-                                                    </svg>
-                                                </div>
-                                                <picture class="hardware__block-item-img">
-                                                    <img src="./images/hardware/img-01.png" alt="">
-                                                </picture>
-                                            </a>
-                                            <a href="#" class="hardware__block-item">
-                                                <div class="hardware__block-item-title">Машины наполнения капсул</div>
-                                                <div class="hardware__block-item-icon slider-btn">
-                                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
-                                                            fill="#101618" />
-                                                        <path
-                                                            d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
-                                                            fill="#101618" />
-                                                    </svg>
-                                                </div>
-                                                <picture class="hardware__block-item-img">
-                                                    <img src="./images/hardware/img-02.png" alt="">
-                                                </picture>
-                                            </a>
-                                            <a href="#" class="hardware__block-item">
-                                                <div class="hardware__block-item-title">Компакторы</div>
-                                                <div class="hardware__block-item-icon slider-btn">
-                                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
-                                                            fill="#101618" />
-                                                        <path
-                                                            d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
-                                                            fill="#101618" />
-                                                    </svg>
-                                                </div>
-                                                <picture class="hardware__block-item-img">
-                                                    <img src="./images/hardware/img-03.png" alt="">
-                                                </picture>
-                                            </a>
-                                            <a href="#" class="hardware__block-item">
-                                                <div class="hardware__block-item-title">Компакторы</div>
-                                                <div class="hardware__block-item-icon slider-btn">
-                                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
-                                                            fill="#101618" />
-                                                        <path
-                                                            d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
-                                                            fill="#101618" />
-                                                    </svg>
-                                                </div>
-                                                <picture class="hardware__block-item-img">
-                                                    <img src="./images/hardware/img-03.png" alt="">
-                                                </picture>
-                                            </a>
-                                            <a href="#" class="hardware__block-item">
-                                                <div class="hardware__block-item-title">Компакторы</div>
-                                                <div class="hardware__block-item-icon slider-btn">
-                                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
-                                                            fill="#101618" />
-                                                        <path
-                                                            d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
-                                                            fill="#101618" />
-                                                    </svg>
-                                                </div>
-                                                <picture class="hardware__block-item-img">
-                                                    <img src="./images/hardware/img-03.png" alt="">
-                                                </picture>
-                                            </a>
-                                            <a href="#" class="hardware__block-item hardware__block-item--more">
-                                                <div class="hardware__block-item-head">Перейти <br> в каталог</div>
-                                                <div class="hardware__block-item-icon slider-btn">
-                                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
-                                                            fill="#101618" />
-                                                        <path
-                                                            d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
-                                                            fill="#101618" />
-                                                    </svg>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="hardware__block-row">
-                                            <div class="hardware__block-head">
-                                                Для производства <br>
-                                                жидких лекарственных <br>
-                                                форм (ЖЛФ)
+                                            <div class="hardware__catalog-row">
+                                                <a href="#" class="hardware__catalog-item">
+                                                    <div class="hardware__catalog-item-title">Таблеточные прессы</div>
+                                                    <div class="hardware__catalog-item-icon slider-btn">
+                                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                                fill="#101618" />
+                                                            <path
+                                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                                fill="#101618" />
+                                                        </svg>
+                                                    </div>
+                                                    <picture class="hardware__catalog-item-img">
+                                                        <img src="./images/hardware/img-01.png" alt="">
+                                                    </picture>
+                                                </a>
+                                                <a href="#" class="hardware__catalog-item">
+                                                    <div class="hardware__catalog-item-title">Таблеточные прессы</div>
+                                                    <div class="hardware__catalog-item-icon slider-btn">
+                                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                                fill="#101618" />
+                                                            <path
+                                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                                fill="#101618" />
+                                                        </svg>
+                                                    </div>
+                                                    <picture class="hardware__catalog-item-img">
+                                                        <img src="./images/hardware/img-01.png" alt="">
+                                                    </picture>
+                                                </a>
+                                                <a href="#" class="hardware__catalog-item">
+                                                    <div class="hardware__catalog-item-title">Таблеточные прессы</div>
+                                                    <div class="hardware__catalog-item-icon slider-btn">
+                                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                                fill="#101618" />
+                                                            <path
+                                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                                fill="#101618" />
+                                                        </svg>
+                                                    </div>
+                                                    <picture class="hardware__catalog-item-img">
+                                                        <img src="./images/hardware/img-01.png" alt="">
+                                                    </picture>
+                                                </a>
+                                                <a href="#" class="hardware__catalog-item">
+                                                    <div class="hardware__catalog-item-title">Таблеточные прессы</div>
+                                                    <div class="hardware__catalog-item-icon slider-btn">
+                                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                                fill="#101618" />
+                                                            <path
+                                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                                fill="#101618" />
+                                                        </svg>
+                                                    </div>
+                                                    <picture class="hardware__catalog-item-img">
+                                                        <img src="./images/hardware/img-01.png" alt="">
+                                                    </picture>
+                                                </a>
+                                                <a href="#" class="hardware__catalog-item">
+                                                    <div class="hardware__catalog-item-title">Таблеточные прессы</div>
+                                                    <div class="hardware__catalog-item-icon slider-btn">
+                                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                                fill="#101618" />
+                                                            <path
+                                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                                fill="#101618" />
+                                                        </svg>
+                                                    </div>
+                                                    <picture class="hardware__catalog-item-img">
+                                                        <img src="./images/hardware/img-01.png" alt="">
+                                                    </picture>
+                                                </a>
+                                                <a href="/oborudovanie/tverdye-lekarstvennye-formy"
+                                                    class="hardware__catalog-item hardware__catalog-item--more">
+                                                    <div class="hardware__catalog-item-head">Перейти <br> в каталог
+                                                    </div>
+                                                    <div class="hardware__catalog-item-icon slider-btn">
+                                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                                fill="#101618"></path>
+                                                            <path
+                                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                                fill="#101618"></path>
+                                                        </svg>
+                                                    </div>
+                                                </a>
                                             </div>
-                                            <a href="#" class="hardware__block-item">
-                                                <div class="hardware__block-item-title">Розлив в ампулы</div>
-                                                <div class="hardware__block-item-icon slider-btn">
-                                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
-                                                            fill="#101618" />
-                                                        <path
-                                                            d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
-                                                            fill="#101618" />
-                                                    </svg>
-                                                </div>
-                                                <picture class="hardware__block-item-img">
-                                                    <img src="./images/hardware/img-04.png" alt="">
-                                                </picture>
-                                            </a>
-                                            <a href="#" class="hardware__block-item">
-                                                <div class="hardware__block-item-title">Розлив в шприцы</div>
-                                                <div class="hardware__block-item-icon slider-btn">
-                                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
-                                                            fill="#101618" />
-                                                        <path
-                                                            d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
-                                                            fill="#101618" />
-                                                    </svg>
-                                                </div>
-                                                <picture class="hardware__block-item-img">
-                                                    <img src="./images/hardware/img-05.png" alt="">
-                                                </picture>
-                                            </a>
-                                            <a href="#" class="hardware__block-item">
-                                                <div class="hardware__block-item-title">Розлив глазных капель</div>
-                                                <div class="hardware__block-item-icon slider-btn">
-                                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
-                                                            fill="#101618" />
-                                                        <path
-                                                            d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
-                                                            fill="#101618" />
-                                                    </svg>
-                                                </div>
-                                                <picture class="hardware__block-item-img">
-                                                    <img src="./images/hardware/img-06.png" alt="">
-                                                </picture>
-                                            </a>
-                                            <a href="#" class="hardware__block-item">
-                                                <div class="hardware__block-item-title">Розлив глазных капель</div>
-                                                <div class="hardware__block-item-icon slider-btn">
-                                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
-                                                            fill="#101618" />
-                                                        <path
-                                                            d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
-                                                            fill="#101618" />
-                                                    </svg>
-                                                </div>
-                                                <picture class="hardware__block-item-img">
-                                                    <img src="./images/hardware/img-06.png" alt="">
-                                                </picture>
-                                            </a>
-                                            <a href="#" class="hardware__block-item">
-                                                <div class="hardware__block-item-title">Розлив глазных капель</div>
-                                                <div class="hardware__block-item-icon slider-btn">
-                                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
-                                                            fill="#101618" />
-                                                        <path
-                                                            d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
-                                                            fill="#101618" />
-                                                    </svg>
-                                                </div>
-                                                <picture class="hardware__block-item-img">
-                                                    <img src="./images/hardware/img-06.png" alt="">
-                                                </picture>
-                                            </a>
-                                            <a href="#" class="hardware__block-item hardware__block-item--more">
-                                                <div class="hardware__block-item-head">Перейти <br> в каталог</div>
-                                                <div class="hardware__block-item-icon slider-btn">
-                                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
-                                                            fill="#101618" />
-                                                        <path
-                                                            d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
-                                                            fill="#101618" />
-                                                    </svg>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="hardware__block-row">
-                                            <div class="hardware__block-head">
-                                                Для производства <br> мазей, кремов <br> и суппозиториев
+                                            <div class="hardware__catalog-row">
+                                                <a href="#" class="hardware__catalog-item">
+                                                    <div class="hardware__catalog-item-title">Таблеточные прессы</div>
+                                                    <div class="hardware__catalog-item-icon slider-btn">
+                                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                                fill="#101618" />
+                                                            <path
+                                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                                fill="#101618" />
+                                                        </svg>
+                                                    </div>
+                                                    <picture class="hardware__catalog-item-img">
+                                                        <img src="./images/hardware/img-01.png" alt="">
+                                                    </picture>
+                                                </a>
+                                                <a href="#" class="hardware__catalog-item">
+                                                    <div class="hardware__catalog-item-title">Таблеточные прессы</div>
+                                                    <div class="hardware__catalog-item-icon slider-btn">
+                                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                                fill="#101618" />
+                                                            <path
+                                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                                fill="#101618" />
+                                                        </svg>
+                                                    </div>
+                                                    <picture class="hardware__catalog-item-img">
+                                                        <img src="./images/hardware/img-01.png" alt="">
+                                                    </picture>
+                                                </a>
+                                                <a href="#" class="hardware__catalog-item">
+                                                    <div class="hardware__catalog-item-title">Таблеточные прессы</div>
+                                                    <div class="hardware__catalog-item-icon slider-btn">
+                                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                                fill="#101618" />
+                                                            <path
+                                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                                fill="#101618" />
+                                                        </svg>
+                                                    </div>
+                                                    <picture class="hardware__catalog-item-img">
+                                                        <img src="./images/hardware/img-01.png" alt="">
+                                                    </picture>
+                                                </a>
+                                                <a href="#" class="hardware__catalog-item">
+                                                    <div class="hardware__catalog-item-title">Таблеточные прессы</div>
+                                                    <div class="hardware__catalog-item-icon slider-btn">
+                                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                                fill="#101618" />
+                                                            <path
+                                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                                fill="#101618" />
+                                                        </svg>
+                                                    </div>
+                                                    <picture class="hardware__catalog-item-img">
+                                                        <img src="./images/hardware/img-01.png" alt="">
+                                                    </picture>
+                                                </a>
+                                                <a href="/oborudovanie/tverdye-lekarstvennye-formy"
+                                                    class="hardware__catalog-item hardware__catalog-item--more">
+                                                    <div class="hardware__catalog-item-head">Перейти <br> в каталог
+                                                    </div>
+                                                    <div class="hardware__catalog-item-icon slider-btn">
+                                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                                                fill="#101618"></path>
+                                                            <path
+                                                                d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                                                fill="#101618"></path>
+                                                        </svg>
+                                                    </div>
+                                                </a>
                                             </div>
-                                            <a href="#" class="hardware__block-item">
-                                                <div class="hardware__block-item-title">Таблеточные прессы</div>
-                                                <div class="hardware__block-item-icon slider-btn">
-                                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
-                                                            fill="#101618" />
-                                                        <path
-                                                            d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
-                                                            fill="#101618" />
-                                                    </svg>
-                                                </div>
-                                                <picture class="hardware__block-item-img">
-                                                    <img src="./images/hardware/img-07.png" alt="">
-                                                </picture>
-                                            </a>
-                                            <a href="#" class="hardware__block-item">
-                                                <div class="hardware__block-item-title">Таблеточные прессы</div>
-                                                <div class="hardware__block-item-icon slider-btn">
-                                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
-                                                            fill="#101618" />
-                                                        <path
-                                                            d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
-                                                            fill="#101618" />
-                                                    </svg>
-                                                </div>
-                                                <picture class="hardware__block-item-img">
-                                                    <img src="./images/hardware/img-08.png" alt="">
-                                                </picture>
-                                            </a>
-                                            <a href="#" class="hardware__block-item">
-                                                <div class="hardware__block-item-title">Таблеточные прессы</div>
-                                                <div class="hardware__block-item-icon slider-btn">
-                                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
-                                                            fill="#101618" />
-                                                        <path
-                                                            d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
-                                                            fill="#101618" />
-                                                    </svg>
-                                                </div>
-                                                <picture class="hardware__block-item-img">
-                                                    <img src="./images/hardware/img-09.png" alt="">
-                                                </picture>
-                                            </a>
-                                            <a href="#" class="hardware__block-item">
-                                                <div class="hardware__block-item-title">Розлив глазных капель</div>
-                                                <div class="hardware__block-item-icon slider-btn">
-                                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
-                                                            fill="#101618" />
-                                                        <path
-                                                            d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
-                                                            fill="#101618" />
-                                                    </svg>
-                                                </div>
-                                                <picture class="hardware__block-item-img">
-                                                    <img src="./images/hardware/img-06.png" alt="">
-                                                </picture>
-                                            </a>
-                                            <a href="#" class="hardware__block-item hardware__block-item--more">
-                                                <div class="hardware__block-item-head">Перейти <br> в каталог</div>
-                                                <div class="hardware__block-item-icon slider-btn">
-                                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
-                                                            fill="#101618" />
-                                                        <path
-                                                            d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
-                                                            fill="#101618" />
-                                                    </svg>
-                                                </div>
-                                            </a>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="swiper-scrollbar js-hardware-catalog-scrollbar"></div>
                             </div>
                         </div>
                     </div>
@@ -1978,6 +1996,126 @@
                             <div class="news__main-icon"></div>
                         </a>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section class="materials">
+            <div class="container">
+                <div class="materials__grid">
+                    <div class="materials__head">
+                        <div class="materials__head-title h2">Полезные материалы</div>
+                        <div class="materials__head-desc">
+                            Актуальные статьи, инструкции и рекомендации от специалистов ИСТ-ПАК
+                        </div>
+                    </div>
+                    <a href="#" class="materials__item">
+                        <div class="materials__item-date">30.07.2026</div>
+                        <div class="materials__item-title">
+                            Оборудование для производства БАД: полный цикл — от смешивания до фасовки
+                        </div>
+                        <div class="materials__item-icon">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                    fill="#101618"></path>
+                                <path
+                                    d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                    fill="#101618"></path>
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="#" class="materials__item">
+                        <div class="materials__item-date">23.06.2026</div>
+                        <div class="materials__item-title">
+                            Почему контроль веса не подходит для мягких желатиновых капсул
+                        </div>
+                        <div class="materials__item-icon">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                    fill="#101618"></path>
+                                <path
+                                    d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                    fill="#101618"></path>
+                            </svg>
+                        </div>
+                        <picture class="materials__item-bg">
+                            <img src="./images/materials/material-01.png" alt="">
+                        </picture>
+                    </a>
+                    <a href="#" class="materials__item">
+                        <div class="materials__item-date">09.06.2026</div>
+                        <div class="materials__item-title">
+                            Линия грануляции: от сырья до готовых гранул — гид по оборудованию,
+                            типам грануляторов и критериям выбора
+                        </div>
+                        <div class="materials__item-icon">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                    fill="#101618"></path>
+                                <path
+                                    d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                    fill="#101618"></path>
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="#" class="materials__item">
+                        <div class="materials__item-date">17.06.2026</div>
+                        <div class="materials__item-title">
+                            Нанесение покрытия в коатере: масштабирование, настройка и контроль процесса
+                        </div>
+                        <div class="materials__item-icon">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                    fill="#101618"></path>
+                                <path
+                                    d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                    fill="#101618"></path>
+                            </svg>
+                        </div>
+                        <picture class="materials__item-bg">
+                            <img src="./images/materials/material-02.png" alt="">
+                        </picture>
+                    </a>
+                    <a href="#" class="materials__item">
+                        <div class="materials__item-date">02.06.2026</div>
+                        <div class="materials__item-title">
+                            Настройка распылительной форсунки коатера: пошаговое руководство для технологов
+                        </div>
+                        <div class="materials__item-icon">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                    fill="#101618"></path>
+                                <path
+                                    d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                    fill="#101618"></path>
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="#" class="materials__more">
+                        <div class="materials__more-title">
+                            Все материалы
+                        </div>
+                        <div class="materials__more-icon">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14 0C6.26769 0 0 6.26769 0 14C0 21.7323 6.26769 28 14 28C21.7323 28 28 21.7323 28 14C28 6.26769 21.7323 0 14 0ZM14 26.9231C6.874 26.9231 1.07692 21.126 1.07692 14C1.07692 6.874 6.874 1.07692 14 1.07692C21.126 1.07692 26.9231 6.874 26.9231 14C26.9231 21.126 21.126 26.9231 14 26.9231Z"
+                                    fill="#101618"></path>
+                                <path
+                                    d="M11.4648 8.99576L16.4693 13.9991L11.4648 19.0025L12.2262 19.765L17.9921 13.9991L12.2262 8.23438L11.4648 8.99576Z"
+                                    fill="#101618"></path>
+                            </svg>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>

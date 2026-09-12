@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const stepsSlider = new Swiper('.js-hero-slider', {
             slidesPerView: 1,
             spaceBetween: 16,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
             navigation: {
                 prevEl: '.js-hero-slider-prev',
                 nextEl: '.js-hero-slider-next'
@@ -82,11 +86,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    if (document.querySelector('.js-hardware-slider')) {
-        const hardwareSlider = new Swiper('.js-hardware-slider', {
+    if (document.querySelector('.js-hardware-catalog-slider')) {
+        const hardwareSlider = new Swiper('.js-hardware-catalog-slider', {
             slidesPerView: 'auto',
             spaceBetween: 16,
             freeMode: true,
+
+            scrollbar: {
+                el: '.js-hardware-catalog-scrollbar',
+                drag: true,
+            }
         })
     }
 
@@ -456,7 +465,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         if (sectionPath === targetTabPath) {
                             section.classList.add('is-active');
 
-                            const slider = section.querySelector('.js-hardware-slider');
+                            const slider = section.querySelector('.js-hardware-catalog-slider');
 
                             if (slider?.swiper) {
                                 slider.swiper.slideTo(0, 0);
@@ -561,5 +570,29 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     initMenu();
+
+    function initBenefits() {
+        const benefitsItems = document.querySelectorAll('[data-benefit]');
+        const benefitsImgs = document.querySelectorAll('[data-benefit-img]')
+
+        if (benefitsItems.length > 0) {
+            benefitsItems.forEach((item) => {
+                const id = item.dataset.benefit;
+                const img = document.querySelector(`[data-benefit-img="${id}"]`);
+
+                const event = window.matchMedia('(max-width: 1023.98px)').matches ? 'click' : 'mouseenter'
+
+                item.addEventListener(event, () => {
+                    benefitsItems.forEach(benefit => benefit.classList.remove('is-active'));
+                    benefitsImgs.forEach(img => img.classList.remove('is-visible'));
+                    img.classList.add('is-visible');
+                    item.classList.add('is-active');
+                    console.log(item, id, img)
+                })
+            })
+        }
+    }
+
+    initBenefits()
 
 })
