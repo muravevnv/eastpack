@@ -2572,7 +2572,8 @@ textarea {
 .hardware__bottom {
     display: flex;
     align-items: center;
-    margin-top: -10px;
+    justify-content: center;
+    margin-top: 40px;
 }
 
 .menu {
