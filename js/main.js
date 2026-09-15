@@ -89,12 +89,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.js-hardware-catalog-slider')) {
         const hardwareSlider = new Swiper('.js-hardware-catalog-slider', {
             slidesPerView: 'auto',
-            spaceBetween: 16,
             freeMode: true,
 
             scrollbar: {
                 el: '.js-hardware-catalog-scrollbar',
-                drag: true,
+                draggable: true,
             }
         })
     }
