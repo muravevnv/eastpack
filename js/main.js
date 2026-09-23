@@ -14,6 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 prevEl: '.js-hero-slider-prev',
                 nextEl: '.js-hero-slider-next'
             },
+            autoplay: {
+                delay: 3000, 
+                disableOnInteraction: false, 
+            },
             loop: true,
             on: {
                 slideChange: function () {

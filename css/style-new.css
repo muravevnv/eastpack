@@ -809,11 +809,18 @@ textarea {
 }
 
 .hero {
-  padding: 16px 0;
+  .container {
+    padding: 0;
+  }
 }
+
 @media screen and (max-width: 1023.98px) {
   .hero {
-    padding: 16px 0;
+    padding: 16px 0 0;
+
+    .container {
+      padding: 0 16px;
+    }
   }
 }
 .hero__logo {
@@ -844,17 +851,18 @@ textarea {
   color: var(--color-black);
   cursor: pointer;
   white-space: nowrap;
+  display: none;
 }
 .hero__title-bottom span.is-active {
-  color: var(--color-primary);
+  color: var(--color-secondary);
   order: -1;
+  display: block;
 }
 
 .hero__inner {
   position: relative;
   padding-left: 104px;
   background: linear-gradient(90deg, #FAFAFA 0%, #C3C6CD 50.48%, #3C3F44 100%);
-  border-radius: 16px;
   overflow: hidden;
 }
 
@@ -875,8 +883,15 @@ textarea {
   align-items: flex-start;
   gap: 40px;
   justify-content: space-between;
-  padding: 32px 24px 32px 0;
+  padding: 100px 24px 100px 0;
   z-index: 2;
+}
+
+@media screen and (max-width: 1599.98px) {
+  .hero__info {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 @media screen and (max-width: 1023.98px) {
@@ -910,14 +925,12 @@ textarea {
 .hero__slider {
   width: 100%;
   height: 100%;
-  padding-left: 600px;
 }
 
 @media screen and (max-width: 1023.98px)  {
   .hero__slider  {
     padding-left: 0;
     overflow: hidden;
-    border-radius: 12px;
   }
 }
 
@@ -930,12 +943,11 @@ textarea {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .hero__slider {
   position: relative;
   overflow: hidden;
-  border-radius: 16px;
 }
 .hero__slider .swiper-slide {
   height: auto;
@@ -972,17 +984,27 @@ textarea {
 }
 
 .benefits__preview {
-  position: relative;
+
   display: block;
   width: 100%;
+  padding: 12px;
   overflow: hidden;
-  border-top: 1px solid var(--color-black);
   border-right: 1px solid var(--color-black);
+  border-top: 1px solid var(--color-black);
+}
+
+.benefits__preview-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (max-width: 1023.98px) {
   .benefits__preview {
     height: 300px;
+    border-right: 0;
+    border-top: 0;
+    padding:  12px 16px;
   }
 }
 
@@ -995,6 +1017,8 @@ textarea {
 .benefits__img {
   position: absolute;
   inset: 0;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
 .benefits__img img {
@@ -3164,14 +3188,14 @@ textarea {
 .hardware__catalog {
   display: flex;
   align-items: stretch;
-  padding: 0 120px;
+  padding: 0 120px 0 0;
   padding-bottom: 50px;
   overflow: hidden;
 }
 
 .hardware__catalog-nav {
   position: relative;
-  width: 30%;
+  width: 472px;
   background-color: var(--color-grey-100);
   position: relative;
   z-index: 2;
@@ -3196,10 +3220,21 @@ textarea {
 }
 
 .hardware__catalog-nav-line {
+  position: relative;
   height: 240px;
   display: flex;
   align-items: center;
-  padding: 12px 12px 12px 0;
+  padding: 12px 12px 12px 132px;
+}
+
+.hardware__catalog-nav-line::before {
+  content: '';
+  width: 100vw;
+  height: 1px;
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  background-color: currentColor;
 }
 
 .hardware__catalog-nav-title {
@@ -3217,7 +3252,7 @@ textarea {
 
 .hardware__catalog-items {
   position: relative;
-  width: 70%;
+  width: calc(100% - 472px);
   z-index: 1;
 }
 
@@ -3262,7 +3297,7 @@ textarea {
   }
 }
 
-@media screen and (max-width: 1399.98px) {
+@media screen and (max-width: 1439.98px) {
 
   .hardware__head,
   .hardware__categories,
@@ -3271,7 +3306,11 @@ textarea {
   }
 
   .hardware__catalog {
-    padding: 0 16px 40px;
+    padding: 0 16px 40px 0;
+  }
+
+  .hardware__catalog-nav-line {
+    padding-left: 16px;
   }
 
   .hardware__catalog-items .swiper-scrollbar {
