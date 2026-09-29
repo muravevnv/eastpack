@@ -3249,9 +3249,10 @@ textarea {
   display: flex;
   align-items: center;
   padding: 12px 12px 12px 132px;
+  border-bottom: 1px solid var(--color-black);
 }
 
-.hardware__catalog-nav-line::before {
+/* .hardware__catalog-nav-line::before {
   content: '';
   width: 100vw;
   height: 1px;
@@ -3259,7 +3260,7 @@ textarea {
   right: 0;
   bottom: -1px;
   background-color: currentColor;
-}
+} */
 
 .hardware__catalog-nav-title {
   font-size: 24px;
@@ -3277,6 +3278,7 @@ textarea {
 .hardware__catalog-items {
   position: relative;
   width: calc(100% - 472px);
+  padding-left: 49px;
   z-index: 1;
 }
 
