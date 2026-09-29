@@ -94,7 +94,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const hardwareSlider = new Swiper('.js-hardware-catalog-slider', {
             slidesPerView: 'auto',
             freeMode: true,
-
+            navigation: {
+                prevEl: '.js-hardware-catalog-slider-prev',
+                nextEl: '.js-hardware-catalog-slider-next'
+            },
             scrollbar: {
                 el: '.js-hardware-catalog-scrollbar',
                 draggable: true,
