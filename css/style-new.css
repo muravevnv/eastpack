@@ -3206,6 +3206,21 @@ textarea {
   height: 100%;
   z-index: 2;
   cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease-in-out;
+}
+
+.hardware__catalog-items:hover {
+  .hardware__catalog-prev,
+  .hardware__catalog-next {
+    opacity: 1;
+    visibility: visible;
+ }
+}
+
+.hardware__catalog-prev.swiper-button-disabled {
+  display: none;
 }
 
 .hardware__catalog-prev {
@@ -3278,7 +3293,6 @@ textarea {
 .hardware__catalog-items {
   position: relative;
   width: calc(100% - 472px);
-  padding-left: 49px;
   z-index: 1;
 }
 
